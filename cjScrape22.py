@@ -88,6 +88,7 @@ def bot(username, password, applicants, query):
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
     listURL = driver.current_url
+    print('LEN: ' + str(len(listURL)))
     #Retrieve all applicant URLs
     apps = driver.find_elements(By.CLASS_NAME, 'resume-search-candidate-card-desktop__name')
     pg = 0
@@ -100,7 +101,7 @@ def pagePush(driver, wb, s1, row):
 
     #Loop through apps
     pg = 0
-    while(pg < 1):
+    while(pg < len(apps)):
         #Open applicant page
         print('READING: ' + str(pg))
         print('URL: ' + urls[pg])
@@ -187,14 +188,12 @@ def pagePush(driver, wb, s1, row):
         row += 1
         driver.back()
         time.sleep(delay())
-    print('BEFORE: ' + listURL)
+
+    #Move to next paage of applicants, using URL substring
     last = int(listURL[-1])
     last += 1
-    print('PAGE: ' + last)
-    listURL[-1] = str(last)
+    listURL = listURL[0: len(listURL) - 1] + str(last)
     driver.get(listURL)
-    print('AFTER: ' + listURL)
-    time.sleep(200)
     return row
 
 bot(username, password, applicants, query)
