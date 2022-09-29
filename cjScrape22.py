@@ -9,6 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 
+start = time.time()
 random.seed(None, 2)
 def delay():
     return random.randint(3,6)
@@ -16,16 +17,11 @@ def delay():
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
 
-#username = 'Ptage92121'
-#password = 'Advantech2022$'
-#query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
-
 username = 'cba92037'
 password = 'g#M8q2qQ'
-applicants = 100
 query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
-def bot(username, password, applicants, query):
+def bot(username, password, query):
     #Create Driver
     options = Options()
     options.add_argument('--incognito')
@@ -51,6 +47,7 @@ def bot(username, password, applicants, query):
     time.sleep(delay())
     driver.find_element(By.CLASS_NAME, 'cj-textarea__inner').send_keys(query)
     time.sleep(delay())
+    time.sleep(20) #Extra Time to Input Location
     driver.find_element(By.CLASS_NAME, 'btn-info').click()
     time.sleep(delay())
 
@@ -81,18 +78,17 @@ def bot(username, password, applicants, query):
     row += 1
 
     #Call wbPush() for each CJ page
-    for i in range(0, int(applicants/50)):
+    while row >= 0:
         row = pagePush(driver, wb, s1, row)
-        i += 1
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
     listURL = driver.current_url
-    print('LEN: ' + str(len(listURL)))
     #Retrieve all applicant URLs
     apps = driver.find_elements(By.CLASS_NAME, 'resume-search-candidate-card-desktop__name')
     pg = 0
     urls = []
+
     while(pg < len(apps)):
         print(apps[pg].get_attribute('href'))
         urls.append(apps[pg].get_attribute('href'))
@@ -103,21 +99,23 @@ def pagePush(driver, wb, s1, row):
     pg = 0
     while(pg < len(apps)):
         #Open applicant page
-        print('READING: ' + str(pg))
+        print('---------- READING: ' + str(row) + ' ----------')
         print('URL: ' + urls[pg])
         driver.get(urls[pg])
-        time.sleep(delay())
+        time.sleep(random.randint(6,8))
 
         #Get list of desired info [url, name, phone, email, title, clearance, YOE, relo, salary, degree, branch, ideal locations, last update]
         s1.write(row, 0, urls[pg])
         try: #NAME
-            name = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').get_attribute('innerText')
+            name = driver.find_element(By.CLASS_NAME, 'profile-name').text
             print(name)
             s1.write(row, 1, name)
         except:
             print('No Name')
         try: #PHONE
             phone = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[4]/div/div[2]/div/div[4]/div/div[2]/span').text
+            if phone == 'No mobile phone':
+                phone = ''
             print(phone)
             s1.write(row, 2, phone)
         except:
@@ -186,14 +184,21 @@ def pagePush(driver, wb, s1, row):
 
         pg += 1
         row += 1
-        driver.back()
-        time.sleep(delay())
 
-    #Move to next paage of applicants, using URL substring
+    #Move to next page of applicants, using URL substring
     last = int(listURL[-1])
     last += 1
     listURL = listURL[0: len(listURL) - 1] + str(last)
     driver.get(listURL)
+    time.sleep(10)
+
+    #Check if last page
+    if len(apps) < 50:
+        row = -1
     return row
 
-bot(username, password, applicants, query)
+bot(username, password, query)
+
+#Record and ouput runtime
+end = time.time()
+print('PROGRAM RUNTIME: ' + str(end - start))
