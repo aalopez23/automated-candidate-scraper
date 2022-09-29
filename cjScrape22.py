@@ -111,7 +111,7 @@ def pagePush(driver, wb, s1, row):
         except:
             print("No Name")
         
-        phone = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[5]/div/div[2]/div/div[4]/div/div[2]/span/text()').get_attribute('textContent')
+        phone = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[4]/div/div[2]/div/div[4]/div/div[2]/span').text
         print(phone)
         time.sleep(200)
 
