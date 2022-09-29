@@ -20,8 +20,8 @@ def delay():
 #password = 'Advantech2022$'
 #query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
-username = 'cba92037'
-password = 'g#M8q2qQ'
+username = 'Ptage92121'
+password = 'Advantech2022$'
 query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
 def bot(username, password):
@@ -63,19 +63,19 @@ def bot(username, password):
     wb = Workbook()
     row = 0
     s1 = wb.add_sheet('S1')
-    #s1.write(row, 0, "URL")
-    s1.write(row, 0, "Name")
-    s1.write(row, 1, "Phone Number")
-    s1.write(row, 2, "E-Mail")
-    s1.write(row, 3, "Title")
-    s1.write(row, 4, "Clearance")
-    s1.write(row, 5, "YOE")
-    s1.write(row, 6, "Relocation?")
-    s1.write(row, 7, "Salary")
-    s1.write(row, 8, "Highest Degree")
-    s1.write(row, 9, "Military Branch")
-    s1.write(row, 10,"Ideal Locations")
-    s1.write(row, 11,"Last Profile Update")
+    s1.write(row, 0, "URL")
+    s1.write(row, 1, "Name")
+    s1.write(row, 2, "Phone Number")
+    s1.write(row, 3, "E-Mail")
+    s1.write(row, 4, "Title")
+    s1.write(row, 5, "Clearance")
+    s1.write(row, 6, "YOE")
+    s1.write(row, 7, "Relocation?")
+    s1.write(row, 8, "Salary")
+    s1.write(row, 9, "Highest Degree")
+    s1.write(row, 10, "Military Branch")
+    s1.write(row, 11,"Ideal Locations")
+    s1.write(row, 12,"Last Profile Update")
     wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.xls')
     row += 1
 
@@ -103,73 +103,80 @@ def pagePush(driver, wb, s1, row):
         driver.get(urls[pg])
         time.sleep(delay())
 
-        #Get list of desired info [name, phone, email, title, clearance, YOE, relo, salary, degree, branch, ideal locations, last update]
+        #Get list of desired info [url, name, phone, email, title, clearance, YOE, relo, salary, degree, branch, ideal locations, last update]
+        s1.write(row, 0, urls[pg])
         try: #NAME
             name = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[1]/div/div[2]/div[2]/div[2]/div/span[1]').get_attribute('innerText')
             print(name)
-            s1.write(row, 0, name)
+            s1.write(row, 1, name)
         except:
-            print("No Name")
-        
-        phone = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[4]/div/div[2]/div/div[4]/div/div[2]/span').text
-        print(phone)
-        time.sleep(200)
-
-        email = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[5]/div/div[2]/div/div[1]/div/div[2]/a').get_attribute('innerText')
-        print(email)
-        
-        
-        try: #PHONE NUMBER
-            phone = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[5]/div/div[2]/div/div[4]/div/div[2]/span').get_attribute('innerText')
+            print('No Name')
+        try: #PHONE
+            phone = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[4]/div/div[2]/div/div[4]/div/div[2]/span').text
             print(phone)
-            s1.write(row, 1, phone)
+            s1.write(row, 2, phone)
         except:
-            print("No Phone Number")
+            print('EXCEPT: No mobile phone')
         try: #EMAIL
-            email = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[5]/div/div[2]/div/div[1]/div/div[2]/a').get_attribute('innerText')
+            email = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[5]/div/div[1]/div[4]/div/div[2]/div/div[1]/div/div[2]/a').text
             print(email)
-            s1.write(row, 2, email)
+            s1.write(row, 3, email)
         except:
-            print("No Email")
-
-        time.sleep(200)
-
+            print('EXCEPT: No Email')
         try: #TITLE
-            s1.write(row, 3, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[1]/div/div[2]/div[2]/div[3]/span').get_attribute('innerText'))
+            title = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[1]/div/div[2]/div[2]/div[3]/span').text
+            print(title)
+            s1.write(row, 4, title)
         except:
-            print("No Title")     
+            print("EXCEPT: No Title")    
         try: #CLEARANCE
-            s1.write(row, 4, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[1]/div/div[2]/div[3]/div[1]/div[2]/div/div[2]/span').get_attribute('innerText'))
+            clear = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[1]/div/div[2]/div[3]/div[1]/div[2]/div/div[1]/span').text
+            print(clear)
+            s1.write(row, 5, clear)
         except:
-            print("No Clearance")
+            print("EXCEPT: No Clearance")
         try: #YEARS OF EXPERIENCE
-            s1.write(row, 5, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[3]/div/div[2]/div/div[1]/div/div[2]/span').get_attribute('innerText'))
+            yoe = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[2]/div/div[2]/div/div[1]/div/div[2]/span').text
+            print(yoe)
+            s1.write(row, 6, yoe)
         except:
-            print("No YOE")
+            print("EXCEPT: No YOE")
         try: #RELOCATION
-            s1.write(row, 6, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[6]/div/div[2]/div/div[1]/div/div[2]/span').get_attribute('innerText'))
+            relo = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[5]/div/div[2]/div/div[1]/div/div[2]/span').text
+            print(relo)
+            s1.write(row, 7, relo)
         except:
-            print("No Relocation Preference")
+            print("EXCEPT: No Relocation Preference")
         try: #SALARY
-            s1.write(row, 7, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[2]/div/div[2]/div[1]/div[4]/div/div[2]/span').get_attribute('innerText'))
+            salary = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[1]/div/div[2]/div[1]/div[4]/div/div[2]/span').text
+            print(salary)
+            s1.write(row, 8, salary)
         except:
-            print("No Salary")      
+            print("EXCEPT: No Salary")      
         try: #HIGHEST DEGREE
-            s1.write(row, 8, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[2]/div/div[2]/div[1]/div[5]/div/div[2]/span').get_attribute('innerText'))
+            degree = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[1]/div/div[2]/div[1]/div[5]/div/div[2]/span').text
+            print(degree)
+            s1.write(row, 9, degree)
         except:
-            print("No Highest Degree")
+            print("EXCEPT: No Highest Degree")
         try: #MILITARY BRANCH
-            s1.write(row, 9, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[2]/div/div[2]/div[1]/div[7]/div/div[2]/span').get_attribute('innerText'))
+            branch = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[1]/div/div[2]/div[1]/div[7]/div/div[2]/span').text
+            print(branch)
+            s1.write(row, 10, branch)
         except:
-            print("No Military Branch")
+            print("EXCEPT: No Military Branch")
         try: #IDEAL LOCATIONS
-            s1.write(row, 10, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[6]/div/div[2]/div/div[3]/div/div[2]/span').get_attribute('innerText'))
+            location = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[5]/div/div[2]/div/div[3]/div/div[2]/span').text
+            print(location)
+            s1.write(row, 11, location)
         except:
-            print("No Ideal Locations")
+            print("EXCEPT: No Ideal Locations")
         try: #LAST UPDATE
-            s1.write(row, 11, driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[1]/div[4]/div/div[1]/div[2]/div/div[2]/div[1]/div[1]/div/div[2]/span').get_attribute('innerText'))
+            update = driver.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div[1]/div[5]/div/div[1]/div[1]/div/div[2]/div[1]/div[1]/div/div[2]/span').text
+            print(update)
+            s1.write(row, 12, update)
         except:
-            print("No Last Update")                                                                                                        
+            print("EXCEPT: No Last Update")                                                                                                        
         wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.xls')
 
         pg += 1
