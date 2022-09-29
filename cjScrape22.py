@@ -20,11 +20,12 @@ def delay():
 #password = 'Advantech2022$'
 #query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
-username = 'Ptage92121'
-password = 'Advantech2022$'
+username = 'cba92037'
+password = 'g#M8q2qQ'
+applicants = 100
 query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
-def bot(username, password):
+def bot(username, password, applicants, query):
     #Create Driver
     options = Options()
     options.add_argument('--incognito')
@@ -80,10 +81,13 @@ def bot(username, password):
     row += 1
 
     #Call wbPush() for each CJ page
-    row = pagePush(driver, wb, s1, row)
+    for i in range(0, int(applicants/50)):
+        row = pagePush(driver, wb, s1, row)
+        i += 1
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
+    listURL = driver.current_url
     #Retrieve all applicant URLs
     apps = driver.find_elements(By.CLASS_NAME, 'resume-search-candidate-card-desktop__name')
     pg = 0
@@ -96,7 +100,7 @@ def pagePush(driver, wb, s1, row):
 
     #Loop through apps
     pg = 0
-    while(pg < len(apps)):
+    while(pg < 1):
         #Open applicant page
         print('READING: ' + str(pg))
         print('URL: ' + urls[pg])
@@ -182,7 +186,15 @@ def pagePush(driver, wb, s1, row):
         pg += 1
         row += 1
         driver.back()
-        time.sleep(delay())  
+        time.sleep(delay())
+    print('BEFORE: ' + listURL)
+    last = int(listURL[-1])
+    last += 1
+    print('PAGE: ' + last)
+    listURL[-1] = str(last)
+    driver.get(listURL)
+    print('AFTER: ' + listURL)
+    time.sleep(200)
     return row
 
-bot(username, password)
+bot(username, password, applicants, query)
