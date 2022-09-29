@@ -1,5 +1,6 @@
 from ssl import ALERT_DESCRIPTION_BAD_CERTIFICATE_HASH_VALUE
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from xlwt import Workbook
@@ -14,15 +15,20 @@ def delay():
 
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
-username = 'Ptage92121'
-password = 'Advantech2022$'
+#username = 'Ptage92121'
+#password = 'Advantech2022$'
+#query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
+
+username = 'cba92037'
+password = 'g#M8q2qQ'
 query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
 def bot(username, password):
     #Create Driver
     options = Options()
     options.add_argument('--incognito')
-    driver = webdriver.Chrome(executable_path=r'C:\Users\Noah Jaurigue\Downloads\chromedriver_win32\chromedriver.exe', chrome_options=options)
+    options.binary_location = '/Applications/Google Chrome.app'
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()
 
     #Open Clearance Jobs
