@@ -15,6 +15,7 @@ def delay():
 
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
+
 #username = 'Ptage92121'
 #password = 'Advantech2022$'
 #query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
@@ -112,5 +113,7 @@ def pagePush(driver, wb, s1, row):
         time.sleep(200)
 
     return row
+
+
 
 bot(username, password)
