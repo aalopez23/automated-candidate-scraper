@@ -1,4 +1,3 @@
-from ssl import ALERT_DESCRIPTION_BAD_CERTIFICATE_HASH_VALUE
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
