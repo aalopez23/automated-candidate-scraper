@@ -1,0 +1,56 @@
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
+from xlwt import Workbook
+from datetime import date
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+import random
+
+#Login Credentials
+username = 'njaurigue@advantechglobal.org'
+password = 'noahjaurigue2022$'
+query = '(desktop OR "it" OR "information technology" OR administrator OR network OR system OR systems OR user) AND (850 OR pensacola OR navarre OR destin OR niceville OR milton OR eglin OR walton OR "panama city" OR tyndall OR bellview OR brent)'
+
+#Start runtime timer
+start = time.time()
+
+#Defining Random Delay
+random.seed(None, 2)
+def delay():
+    return random.randint(3,6)
+
+def bot(username, password, query):
+    #Create Driver
+    options = Options()
+    options.binary_location = '/Applications/Google Chrome.app'
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.maximize_window()
+
+    #Open Sharepoint
+    driver.get('https://advantechgsenterprisesinc.sharepoint.com/HR/TR/RESUMES%20%20INTERVIEWS/Forms/AllItems.aspx')
+
+    #Microsoft Login
+    driver.find_element(By.NAME, 'loginfmt').send_keys(username)
+    driver.find_element(By.ID, 'idSIButton9').click()
+    driver.find_element(By.NAME, 'passwd').send_keys(password)
+    time.sleep(1)
+    driver.find_element(By.ID, 'idSIButton9').click()
+    time.sleep(1)
+    driver.find_element(By.ID, 'idSIButton9').click()    
+
+    #Search Query
+    driver.find_element(By.TAG_NAME, 'INPUT').send_keys(query)
+    driver.find_element(By.TAG_NAME, 'INPUT').send_keys(Keys.RETURN)
+
+    time.sleep(200)
+
+
+
+bot(username, password, query)
+
+#Record and ouput runtime
+end = time.time()
+print('PROGRAM RUNTIME: ' + str(end - start))
