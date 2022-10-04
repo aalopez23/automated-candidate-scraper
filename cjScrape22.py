@@ -1,3 +1,5 @@
+#Authors: Noah Jaungue, Steven Tran, Henry Luu, Jonathan 
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -8,6 +10,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 
+
+
 start = time.time()
 random.seed(None, 2)
 def delay():
@@ -16,8 +20,8 @@ def delay():
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
 
-username = 'cba92037'
-password = 'g#M8q2qQ'
+username = 'Ptage92121'
+password = 'Advantech2022$'
 query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
 
 def bot(username, password, query):
@@ -79,6 +83,9 @@ def bot(username, password, query):
     #Call wbPush() for each CJ page
     while row >= 0:
         row = pagePush(driver, wb, s1, row)
+
+    wb.save('cjScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.xls')
+
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
