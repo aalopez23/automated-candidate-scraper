@@ -10,8 +10,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 
-
-
 start = time.time()
 random.seed(None, 2)
 def delay():
