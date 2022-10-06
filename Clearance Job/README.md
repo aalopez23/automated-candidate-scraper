@@ -4,6 +4,7 @@ There are a lot of notes that we put on the scrap file so if you want to know ho
 just go through and read the comments. 
 
 Here are the steps to run the code:
+1. Go to VSCODE extensions and download this extension: https://marketplace.visualstudio.com/items?itemName=katalon-llc.katalium
 1. Fill out the username/password/query
 2. Press run
 3. We did not program the location so make sure you keep an eye out. The location will have to be manually inputed, 
