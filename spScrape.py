@@ -45,12 +45,34 @@ def bot(username, password, query):
     driver.find_element(By.TAG_NAME, 'INPUT').send_keys(query)
     driver.find_element(By.TAG_NAME, 'INPUT').send_keys(Keys.RETURN)
     time.sleep(5)
-    print('CLICKING')
-    driver.find_element(By.CLASS_NAME, 'od-scrollablePane-content-ItemsScopeList').click()
-    while(True):
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.PAGE_DOWN)
 
-    print(len(driver.find_elements(By.CLASS_NAME, 'ms-Link')))
+    #Scrolling and Adding Links
+    dupes = []
+    apps = driver.find_elements(By.CLASS_NAME, 'ms-Link')
+    apps[1].click()
+    #driver.find_element(By.CLASS_NAME, 'od-scrollablePane-content-ItemsScopeList').click()
+
+    time.sleep(200)
+
+
+
+
+
+    start = time.time()
+    while(time.time() < start + 30):
+        set = driver.find_elements(By.CLASS_NAME, 'ms-Link')
+        for i in set:
+            dupes.append(i)
+        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.PAGE_DOWN)
+        print('URLS: ' + str(len(list(dict.fromkeys(dupes)))))
+
+    print('DUPES: ' + str(len(dupes)))
+    #Remove Duplicates
+    urls = list(dict.fromkeys(dupes))
+    print('URLS: ' + str(len(urls)))
+
+    urls[0].click()
+    time.sleep(200)
 
 
 
@@ -59,3 +81,4 @@ bot(username, password, query)
 #Record and ouput runtime
 end = time.time()
 print('PROGRAM RUNTIME: ' + str(end - start))
+
