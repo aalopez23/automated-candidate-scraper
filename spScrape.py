@@ -44,7 +44,15 @@ def bot(username, password, query):
     #Search Query
     driver.find_element(By.TAG_NAME, 'INPUT').send_keys(query)
     driver.find_element(By.TAG_NAME, 'INPUT').send_keys(Keys.RETURN)
+    time.sleep(5)
+    print('CLICKING')
+    driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div/div/div/div').click()
+    time.sleep(5)
+    print('SCROLLING')
+    driver.execute_script("window.scrollTo(0, 200)")
+    time.sleep(5)
 
+    print(len(driver.find_elements(By.CLASS_NAME, 'ms-Link')))
     time.sleep(200)
 
 
