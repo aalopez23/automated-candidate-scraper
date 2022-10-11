@@ -47,13 +47,17 @@ def bot(username, password, query):
     time.sleep(5)
 
     #Scrolling and Adding Links
+    scope = 0
     dupes = []
-    apps = driver.find_elements(By.CLASS_NAME, 'ms-Link')
-    apps[100].click()
+    while(scope < 10):
+        i = 0
+        apps = driver.find_elements(By.CLASS_NAME, 'ms-Link')
+        apps[i].click()
+        url = driver.current_url
+        print(str(i) + ": " + url)
+        i += 1
+        time.sleep(200)
     #driver.find_element(By.CLASS_NAME, 'od-scrollablePane-content-ItemsScopeList').click()
-
-    time.sleep(200)
-
 
     start = time.time()
     while(time.time() < start + 30):
