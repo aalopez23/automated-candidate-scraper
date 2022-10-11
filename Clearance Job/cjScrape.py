@@ -1,4 +1,4 @@
-#Authors: Noah Jaungue, Steven Tran, Henry Luu, Jonathan 
+#Authors: Noah Jaungue, Steven Tran, Henry Luu, Jonathan Nguyen, Antonio Lopez
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -20,7 +20,7 @@ def delay():
 
 username = 'Ptage92121'
 password = 'Advantech2022$'
-query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
+query = '(system OR network OR systems OR ism OR "it" OR "information technology" OR 3c0 OR desktop OR user) AND (troubleshooting OR troubleshoot OR troubleshot OR ACAS OR SCAP OR LAN OR LANs OR server OR servers) AND (Security+ Certification OR Sec+ OR Security+ OR CSA+ OR GICSP OR GSEC OR SSCP OR "CCNA Security" OR ccna-security OR CISSP OR CCNP OR CASP OR CISM OR GSLC)'
 
 def bot(username, password, query):
     #Create Driver
@@ -48,7 +48,7 @@ def bot(username, password, query):
     time.sleep(delay())
     driver.find_element(By.CLASS_NAME, 'cj-textarea__inner').send_keys(query)
     time.sleep(delay())
-    time.sleep(20) #Extra Time to Input Location
+    time.sleep(50) #Extra Time to Input Location
     driver.find_element(By.CLASS_NAME, 'btn-info').click()
     time.sleep(delay())
 
@@ -75,14 +75,14 @@ def bot(username, password, query):
     s1.write(row, 10, "Military Branch")
     s1.write(row, 11,"Ideal Locations")
     s1.write(row, 12,"Last Profile Update")
-    wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.xls')
+    wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1
 
     #Call wbPush() for each CJ page
     while row >= 0:
         row = pagePush(driver, wb, s1, row)
 
-    wb.save('cjScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.xls')
+    wb.save('cjScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
@@ -184,7 +184,7 @@ def pagePush(driver, wb, s1, row):
             s1.write(row, 12, update)
         except:
             print("EXCEPT: No Last Update")                                                                                                        
-        wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.xls')
+        wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
         pg += 1
         row += 1
