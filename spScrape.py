@@ -9,9 +9,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 
-import time
-import random
-
 #Login Credentials
 username = 'njaurigue@advantechglobal.org'
 password = 'noahjaurigue2022$'
@@ -49,13 +46,40 @@ def bot(username, password, query):
     driver.find_element(By.TAG_NAME, 'INPUT').send_keys(Keys.RETURN)
     time.sleep(5)
 
+    #Go to first file
+    driver.find_element(By.CLASS_NAME, 'ms-Link').click()
+    i = 0
+    while(True):
+        print('NEW')
+        tabs = driver.window_handles
+        time.sleep(3)
+        driver.switch_to.window(tabs[1])
+        url = driver.current_url
+        print(str(i) + ": " + url)
+        driver.close()
+        driver.switch_to.window(tabs[0])
+        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.ARROW_DOWN)
+        print('BEFORE')
+        #driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.RETURN)
+        driver.switch_to.active_element.send_keys(Keys.RETURN)
+        print('AFTER')
+        i += 1
+
+        time.sleep(2)
+
+
+
     #Scrolling and Adding Links
     scope = 0
     dupes = []
     while(scope < 10):
         i = 0
         apps = driver.find_elements(By.CLASS_NAME, 'ms-Link')
+        print('APPS: ' + str(len(apps)))
         apps[i].click()
+        #Get list of tabs
+        tabs = driver.window_handles
+        driver.switch_to.window(tabs[1])
         url = driver.current_url
         print(str(i) + ": " + url)
         i += 1
