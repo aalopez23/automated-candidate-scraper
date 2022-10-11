@@ -1,4 +1,4 @@
-#Authors: Noah Jaungue, Steven Tran, Henry Luu, Jonathan 
+#Authors: Noah Jaungue, Steven Tran, Henry Luu, Jonathan Nguyen, Antonio Lopez
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -48,7 +48,7 @@ def bot(username, password, query):
     time.sleep(delay())
     driver.find_element(By.CLASS_NAME, 'cj-textarea__inner').send_keys(query)
     time.sleep(delay())
-    time.sleep(100) #Extra Time to Input Location
+    time.sleep(50) #Extra Time to Input Location
     driver.find_element(By.CLASS_NAME, 'btn-info').click()
     time.sleep(delay())
 
