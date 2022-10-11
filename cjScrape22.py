@@ -16,9 +16,9 @@ def delay():
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
 
-username = 'cba92037'
-password = 'g#M8q2qQ'
-query = '(moodle OR blackboard OR canvas OR lms OR "learning management" OR "learning assessment")'
+username = 'Ptage92121'
+password = 'Advantech2022$'
+query = '("system administrator" OR "systems administrator" OR "IT" OR "Information Technology" OR 3c0 OR desktop OR user OR network) AND (norfolk OR virginia beach"" OR hampton OR chesapeake OR oceana OR "dam neck" OR "va beach" OR "deer creek" OR portsmouth OR "indian river" OR "great neck" OR 757)'
 numberOfApplicants = '()'
 
 def bot(username, password, query):
