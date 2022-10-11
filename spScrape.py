@@ -1,8 +1,12 @@
-from shareplum import Site
-from shareplum import Office365
-from shareplum.site import Version
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 from xlwt import Workbook
 from datetime import date
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+import random
 
 import time
 import random
