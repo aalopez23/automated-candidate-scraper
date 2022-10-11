@@ -1,11 +1,9 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.keys import Keys
+from shareplum import Site
+from shareplum import Office365
+from shareplum.site import Version
 from xlwt import Workbook
 from datetime import date
-from selenium.webdriver.common.action_chains import ActionChains
+
 import time
 import random
 
@@ -17,6 +15,7 @@ query = '(desktop OR "it" OR "information technology" OR administrator OR networ
 #Start runtime timer
 start = time.time()
 
+<<<<<<< Updated upstream
 #Defining Random Delay
 random.seed(None, 2)
 def delay():
@@ -53,7 +52,11 @@ def bot(username, password, query):
     #driver.find_element(By.CLASS_NAME, 'od-scrollablePane-content-ItemsScopeList').click()
 
     time.sleep(200)
+=======
+>>>>>>> Stashed changes
 
+auth = Office365('https://advantechgsenterprisesinc.sharepoint.com', username = username, password = password).GetCookies()
+site = Site('https://advantechgsenterprisesinc.sharepoint.com/HR/TR/RESUMES%20%20INTERVIEWS/Forms/AllItems.aspx', version = Version.v365, authcookie=auth)
 
     start = time.time()
     while(time.time() < start + 30):
@@ -71,7 +74,6 @@ def bot(username, password, query):
     urls[0].click()
     time.sleep(200)
 
-bot(username, password, query)
 
 #Record and ouput runtime
 end = time.time()
