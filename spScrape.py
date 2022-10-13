@@ -1,3 +1,4 @@
+from re import L
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -49,20 +50,31 @@ def bot(username, password, query):
     #Go to first file
     driver.find_element(By.CLASS_NAME, 'ms-Link').click()
     i = 0
+    urls = []
     while(True):
         print('NEW')
         tabs = driver.window_handles
         time.sleep(3)
         driver.switch_to.window(tabs[1])
         url = driver.current_url
+        urls.append(url)
         print(str(i) + ": " + url)
         driver.close()
         driver.switch_to.window(tabs[0])
         driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.ARROW_DOWN)
-        print('BEFORE')
-        #driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.RETURN)
-        driver.switch_to.active_element.send_keys(Keys.RETURN)
-        print('AFTER')
+        time.sleep(1)
+        print('TAB')
+        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.TAB)
+        time.sleep(1)
+        print('SHIFT TAB')
+        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.SHIFT + Keys.TAB)
+        time.sleep(1)
+        print('DOWN')
+        driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.ARROW_DOWN)
+        time.sleep(200)
+
+        print('RETURN')
+        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.RETURN)
         i += 1
 
         time.sleep(2)
@@ -91,8 +103,8 @@ def bot(username, password, query):
 
     start = time.time()
     while(time.time() < start + 30):
-        set = driver.find_elements(By.CLASS_NAME, 'ms-Link')
-        for i in set:
+        l = driver.find_elements(By.CLASS_NAME, 'ms-Link')
+        for i in l:
             dupes.append(i)
         driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.PAGE_DOWN)
         print('URLS: ' + str(len(list(dict.fromkeys(dupes)))))
