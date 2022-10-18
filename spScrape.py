@@ -54,7 +54,8 @@ def bot(username, password, query):
 
     #Go to first file
     urls = []
-    #driver.find_element(By.CLASS_NAME, 'ms-Link').click()
+    #Selecting the list and the not the specific element
+    # Don't ask why it works but it works
     driver.find_element(By.CLASS_NAME, "root-125").click()
     print("------------" + str(len(driver.find_elements(By.CLASS_NAME, "root-125"))) + "------------")
     actions.send_keys(Keys.DOWN)
@@ -69,7 +70,7 @@ def bot(username, password, query):
         time.sleep(3)
         
         if len(tabs) >= 2:
-            #Base Case (New Tab)
+            #Base Case (There is a New Tab)
             driver.switch_to.window(tabs[1])
             url = driver.current_url
             urls.append(url)
@@ -91,7 +92,6 @@ def bot(username, password, query):
         if (len(urls) > 1) and (urls[-1] == urls[-2]):
             print('---------------HIT MAX---------------')
             playsound('mixkit-positive-notification-951.mp3')
-            time.sleep(200)
             driver.find_element(By.CLASS_NAME, "root-125").click()
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
