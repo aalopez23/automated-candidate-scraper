@@ -56,6 +56,7 @@ def bot(username, password, query):
     urls = []
     #driver.find_element(By.CLASS_NAME, 'ms-Link').click()
     driver.find_element(By.CLASS_NAME, "root-125").click()
+    print("------------" + str(len(driver.find_elements(By.CLASS_NAME, "root-125"))) + "------------")
     actions.send_keys(Keys.DOWN)
     actions.send_keys(Keys.DOWN)
     actions.send_keys(Keys.UP)
@@ -63,12 +64,10 @@ def bot(username, password, query):
     actions.perform()
     
     i = 0
-    homeurl = driver.current_url
     while(True):
-        print('NEW')
         tabs = driver.window_handles
         time.sleep(3)
-
+        
         if len(tabs) >= 2:
             #Base Case (New Tab)
             driver.switch_to.window(tabs[1])
@@ -78,15 +77,7 @@ def bot(username, password, query):
             driver.close()
             driver.switch_to.window(tabs[0])
             time.sleep(1)
-        elif homeurl == driver.current_url:
-            print('---------------HIT MAX---------------')
-            playsound('mixkit-positive-notification-951.mp3')
-            driver.find_element(By.CLASS_NAME, "root-125").click()
-            actions.send_keys(Keys.DOWN)
-            actions.send_keys(Keys.DOWN)
-            actions.send_keys(Keys.UP)
-            actions.send_keys(Keys.RETURN)
-            actions.perform()
+
         else:
             #No New Tab
             url = driver.current_url
@@ -96,12 +87,26 @@ def bot(username, password, query):
             actions.perform()
             time.sleep(1)
 
+        #Checks if the last url two urls are the same, reintialize the pointer
+        if (len(urls) > 1) and (urls[-1] == urls[-2]):
+            print('---------------HIT MAX---------------')
+            playsound('mixkit-positive-notification-951.mp3')
+            time.sleep(200)
+            driver.find_element(By.CLASS_NAME, "root-125").click()
+            actions.send_keys(Keys.DOWN)
+            actions.send_keys(Keys.DOWN)
+            actions.send_keys(Keys.UP)
+            actions.send_keys(Keys.RETURN)
+            actions.perform()
+
         actions.send_keys(Keys.DOWN)
         print('DOWN')
         actions.send_keys(Keys.RETURN)
         print('RETURN')
         actions.perform()
         i += 1
+        
+        
 
 
 
