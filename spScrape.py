@@ -9,6 +9,7 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
+from playsound import playsound
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
@@ -33,10 +34,13 @@ def bot(username, password, query):
 
     #Open Sharepoint
     driver.get('https://advantechgsenterprisesinc.sharepoint.com/HR/TR/RESUMES%20%20INTERVIEWS/Forms/AllItems.aspx')
+    time.sleep(1)
 
     #Microsoft Login
     driver.find_element(By.NAME, 'loginfmt').send_keys(username)
+    time.sleep(1)
     driver.find_element(By.ID, 'idSIButton9').click()
+    time.sleep(1)
     driver.find_element(By.NAME, 'passwd').send_keys(password)
     time.sleep(1)
     driver.find_element(By.ID, 'idSIButton9').click()
@@ -58,17 +62,40 @@ def bot(username, password, query):
     actions.send_keys(Keys.RETURN)
     actions.perform()
     
+    i = 0
+    homeurl = driver.current_url
     while(True):
-        i = 0
         print('NEW')
         tabs = driver.window_handles
         time.sleep(3)
-        driver.switch_to.window(tabs[1])
-        url = driver.current_url
-        urls.append(url)
-        print(str(i) + ": " + url)
-        driver.close()
-        driver.switch_to.window(tabs[0])
+
+        if len(tabs) >= 2:
+            #Base Case (New Tab)
+            driver.switch_to.window(tabs[1])
+            url = driver.current_url
+            urls.append(url)
+            print(str(i + 1) + ": " + url)
+            driver.close()
+            driver.switch_to.window(tabs[0])
+            time.sleep(1)
+        elif homeurl == driver.current_url:
+            print('---------------HIT MAX---------------')
+            playsound('mixkit-positive-notification-951.mp3')
+            driver.find_element(By.CLASS_NAME, "root-125").click()
+            actions.send_keys(Keys.DOWN)
+            actions.send_keys(Keys.DOWN)
+            actions.send_keys(Keys.UP)
+            actions.send_keys(Keys.RETURN)
+            actions.perform()
+        else:
+            #No New Tab
+            url = driver.current_url
+            urls.append(url)
+            print(str(i + 1) + ": " + url)
+            actions.send_keys(Keys.ESCAPE)
+            actions.perform()
+            time.sleep(1)
+
         actions.send_keys(Keys.DOWN)
         print('DOWN')
         actions.send_keys(Keys.RETURN)
