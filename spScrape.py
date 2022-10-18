@@ -1,4 +1,3 @@
-from re import L
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -14,7 +13,7 @@ from playsound import playsound
 #Login Credentials
 username = 'stran@advantechglobal.org'
 password = 'steventran2022$'
-query = '(desktop OR "it" OR "information technology" OR administrator OR network OR system OR systems OR user) AND (850 OR pensacola OR navarre OR destin OR niceville OR milton OR eglin OR walton OR "panama city" OR tyndall OR bellview OR brent)'
+query = '("system administrator" OR "systems administrator" OR "IT" OR "Information Technology" OR 3c0 OR desktop OR user OR network) AND (norfolk OR virginia beach"" OR hampton OR chesapeake OR oceana OR "dam neck" OR "va beach" OR "deer creek" OR portsmouth OR "indian river" OR "great neck" OR 757)'
 
 #Start runtime timer
 start = time.time()
