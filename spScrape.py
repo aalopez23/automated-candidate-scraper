@@ -11,8 +11,8 @@ import time
 import random
 
 #Login Credentials
-username = 'njaurigue@advantechglobal.org'
-password = 'noahjaurigue2022$'
+username = 'stran@advantechglobal.org'
+password = 'steventran2022$'
 query = '(desktop OR "it" OR "information technology" OR administrator OR network OR system OR systems OR user) AND (850 OR pensacola OR navarre OR destin OR niceville OR milton OR eglin OR walton OR "panama city" OR tyndall OR bellview OR brent)'
 
 #Start runtime timer
@@ -28,6 +28,7 @@ def bot(username, password, query):
     options = Options()
     options.binary_location = '/Applications/Google Chrome.app'
     driver = webdriver.Chrome(ChromeDriverManager().install())
+    actions = ActionChains(driver)
     driver.maximize_window()
 
     #Open Sharepoint
@@ -48,10 +49,17 @@ def bot(username, password, query):
     time.sleep(5)
 
     #Go to first file
-    driver.find_element(By.CLASS_NAME, 'ms-Link').click()
-    i = 0
     urls = []
+    #driver.find_element(By.CLASS_NAME, 'ms-Link').click()
+    driver.find_element(By.CLASS_NAME, "root-125").click()
+    actions.send_keys(Keys.DOWN)
+    actions.send_keys(Keys.DOWN)
+    actions.send_keys(Keys.UP)
+    actions.send_keys(Keys.RETURN)
+    actions.perform()
+    
     while(True):
+        i = 0
         print('NEW')
         tabs = driver.window_handles
         time.sleep(3)
@@ -61,23 +69,12 @@ def bot(username, password, query):
         print(str(i) + ": " + url)
         driver.close()
         driver.switch_to.window(tabs[0])
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.ARROW_DOWN)
-        time.sleep(1)
-        print('TAB')
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.TAB)
-        time.sleep(1)
-        print('SHIFT TAB')
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.SHIFT + Keys.TAB)
-        time.sleep(1)
+        actions.send_keys(Keys.DOWN)
         print('DOWN')
-        driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.ARROW_DOWN)
-        time.sleep(200)
-
+        actions.send_keys(Keys.RETURN)
         print('RETURN')
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.RETURN)
+        actions.perform()
         i += 1
-
-        time.sleep(2)
 
 
 
