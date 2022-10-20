@@ -96,7 +96,7 @@ def bot(username, password, query):
             playsound('mixkit-positive-notification-951.mp3')
             #urls = urls[len(urls) - 2] # Removes the last two elements from the list (NOT WORKING)
             #i -= 2 # Taking the last two elements from the counter (NOT WORKING)
-            countdown(50) # Wait for the page to load (need tweaking)
+            countdown(20) # Wait for the page to load (need tweaking)
             print('Wait for the load is done')
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, "root-125").click()
@@ -130,6 +130,12 @@ def bot(username, password, query):
 
     while len(nodupes) != 0:
         s1.write(row, 0, nodupes[0])
+        filetype = 'OTHER'
+        if(':w:' in nodupes[0]):
+            filetype = 'Word'
+        elif ':x:' in nodupes[0]:
+            filetype = 'Excel'
+        s1.write(row, 1, filetype)
         del nodupes[0]
         row += 1
 
