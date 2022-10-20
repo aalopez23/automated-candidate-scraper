@@ -96,23 +96,19 @@ def bot(username, password, query):
             playsound('mixkit-positive-notification-951.mp3')
             #urls = urls[len(urls) - 2] # Removes the last two elements from the list (NOT WORKING)
             #i -= 2 # Taking the last two elements from the counter (NOT WORKING)
-<<<<<<< HEAD
-            countdown(t)
-            # Reintialize the pointer to the next element
-            driver.find_element(By.CLASS_NAME, "root-125").click()
-            #time.sleep(500) # TODO: Fix the previous two links not being recorded
-=======
-            time.sleep(5) # Wait for the page to load (need tweaking)
+            countdown(50) # Wait for the page to load (need tweaking)
             print('Wait for the load is done')
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, "root-125").click()
             # TODO: Fix the previous two links not being recorded
->>>>>>> 4fde902d202be437f6c3ffcf8123f355350317af
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
             actions.send_keys(Keys.RETURN)
             actions.perform()
+
+        if (len(urls) > 1) and (urls[-1] == urls[-2] == urls[-3]):
+            break
 
         actions.send_keys(Keys.DOWN)
         print('DOWN')
@@ -120,7 +116,25 @@ def bot(username, password, query):
         print('RETURN')
         actions.perform()
         i += 1
-    
+
+    nodupes = [*set(urls)]
+    print('# OF LINKS, NO DUPES: ' + str(len(nodupes)))
+
+    #Export to Excel
+    wb = Workbook()
+    row = 0
+    s1 = wb.add_sheet('S1')
+    s1.write(row, 0, "URL")
+    wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
+    row += 1    
+
+    while len(nodupes) != 0:
+        s1.write(row, 0, nodupes[0])
+        del nodupes[0]
+        row += 1
+
+    wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
+
         
         
 
