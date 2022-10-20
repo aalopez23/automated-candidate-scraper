@@ -18,11 +18,16 @@ query = '("system administrator" OR "systems administrator" OR "IT" OR "Informat
 #Start runtime timer
 start = time.time()
 
-#Defining Random Delay
-random.seed(None, 2)
-def delay():
-    return random.randint(3,6)
-
+def countdown(t):
+    while t != 0:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print("Time left: " + timer, end="\r")
+        time.sleep(1)
+        t -= 1
+    print('The load period has ended')
+        
+t = 50
 def bot(username, password, query):
     #Create Driver
     options = Options()
@@ -69,6 +74,7 @@ def bot(username, password, query):
         if len(tabs) >= 2:
             #Base Case (There is a New Tab)
             driver.switch_to.window(tabs[1])
+            time.sleep(1)
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
@@ -77,6 +83,7 @@ def bot(username, password, query):
 
         else:
             #No New Tab
+            time.sleep(2)# Prevents the url check from checking before the link is changed
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
@@ -89,11 +96,10 @@ def bot(username, password, query):
             playsound('mixkit-positive-notification-951.mp3')
             #urls = urls[len(urls) - 2] # Removes the last two elements from the list (NOT WORKING)
             #i -= 2 # Taking the last two elements from the counter (NOT WORKING)
-            time.sleep(50) # Wait for the page to load (need tweaking)
-            print('Wait for the load is done')
+            countdown(t)
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, "root-125").click()
-            time.sleep(500) # TODO: Fix the previous two links not being recorded
+            #time.sleep(500) # TODO: Fix the previous two links not being recorded
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
@@ -106,46 +112,11 @@ def bot(username, password, query):
         print('RETURN')
         actions.perform()
         i += 1
+    
         
         
 
 
-
-    #Scrolling and Adding Links
-    scope = 0
-    dupes = []
-    while(scope < 10):
-        i = 0
-        apps = driver.find_elements(By.CLASS_NAME, 'ms-Link')
-        print('APPS: ' + str(len(apps)))
-        apps[i].click()
-        #Get list of tabs
-        tabs = driver.window_handles
-        driver.switch_to.window(tabs[1])
-        url = driver.current_url
-        print(str(i) + ": " + url)
-        i += 1
-        time.sleep(200)
-    #driver.find_element(By.CLASS_NAME, 'od-scrollablePane-content-ItemsScopeList').click()
-
-    time.sleep(200)
-
-
-    start = time.time()
-    while(time.time() < start + 30):
-        l = driver.find_elements(By.CLASS_NAME, 'ms-Link')
-        for i in l:
-            dupes.append(i)
-        driver.find_element(By.TAG_NAME, 'html').send_keys(Keys.PAGE_DOWN)
-        print('URLS: ' + str(len(list(dict.fromkeys(dupes)))))
-
-    print('DUPES: ' + str(len(dupes)))
-    #Remove Duplicates
-    urls = list(dict.fromkeys(dupes))
-    print('URLS: ' + str(len(urls)))
-
-    urls[0].click()
-    time.sleep(200)
 
 bot(username, password, query)
 
