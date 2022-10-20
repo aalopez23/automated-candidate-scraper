@@ -70,7 +70,7 @@ def bot(username, password, query):
     i = 0
     while(True):
         tabs = driver.window_handles
-        
+        time.sleep(3)
         if len(tabs) >= 2:
             #Base Case (There is a New Tab)
             driver.switch_to.window(tabs[1])
@@ -96,10 +96,18 @@ def bot(username, password, query):
             playsound('mixkit-positive-notification-951.mp3')
             #urls = urls[len(urls) - 2] # Removes the last two elements from the list (NOT WORKING)
             #i -= 2 # Taking the last two elements from the counter (NOT WORKING)
+<<<<<<< HEAD
             countdown(t)
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, "root-125").click()
             #time.sleep(500) # TODO: Fix the previous two links not being recorded
+=======
+            time.sleep(5) # Wait for the page to load (need tweaking)
+            print('Wait for the load is done')
+            # Reintialize the pointer to the next element
+            driver.find_element(By.CLASS_NAME, "root-125").click()
+            # TODO: Fix the previous two links not being recorded
+>>>>>>> 4fde902d202be437f6c3ffcf8123f355350317af
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
