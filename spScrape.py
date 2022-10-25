@@ -8,6 +8,7 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
+from PersonSc import*
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
@@ -146,4 +147,3 @@ bot(username, password, query)
 #Record and ouput runtime
 end = time.time()
 print('PROGRAM RUNTIME: ' + str(end - start))
-
