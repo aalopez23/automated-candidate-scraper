@@ -9,5 +9,9 @@ import aspose.words as aw # pip install aspose-words
 # Takes a Word Document passed in
 # Converts into .txt file as desired name
 # Saves txt file into same directory 
-doc = aw.Document("ResumeDocs\Andrew_Chang.docx")
-doc.save("AndrewResume.txt")
+def convertDoc(wordDoc):
+    doc = aw.Document(wordDoc)
+    doc.save("ResumeOutput.txt")
+    
+convertDoc('ResumeDocs\Matthew_Williams.docx')
+convertDoc('ResumeDocs\Andrew_Chang.docx')  ### This function call replaces ResumeOutput that holds Matthew's content
