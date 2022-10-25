@@ -8,7 +8,6 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
-from playsound import playsound
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
@@ -25,7 +24,6 @@ def countdown(t):
         print("Time left: " + timer, end="\r")
         time.sleep(1)
         t -= 1
-    print('The load period has ended')
         
 t = 50
 def bot(username, password, query):
@@ -83,7 +81,7 @@ def bot(username, password, query):
 
         else:
             #No New Tab
-            time.sleep(2)# Prevents the url check from checking before the link is changed
+            time.sleep(1)# Prevents the url check from checking before the link is changed
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
@@ -93,14 +91,9 @@ def bot(username, password, query):
         #Checks if the last url two urls are the same
         if (len(urls) > 1) and (urls[-1] == urls[-2]):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
-            playsound('mixkit-positive-notification-951.mp3')
-            #urls = urls[len(urls) - 2] # Removes the last two elements from the list (NOT WORKING)
-            #i -= 2 # Taking the last two elements from the counter (NOT WORKING)
-            countdown(20) # Wait for the page to load (need tweaking)
-            print('Wait for the load is done')
+            countdown(3) # Wait for the page to load (need tweaking)
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, "root-125").click()
-            # TODO: Fix the previous two links not being recorded
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
@@ -124,27 +117,29 @@ def bot(username, password, query):
     wb = Workbook()
     row = 0
     s1 = wb.add_sheet('S1')
-    s1.write(row, 0, "URL")
+    s1.write(row, 0, 'URL')
+    s1.write(row, 1, 'File Type')
+    s1.write(row, 2, 'File Name')
+    s1.write(row, 3, 'Name')
     wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1    
 
     while len(nodupes) != 0:
         s1.write(row, 0, nodupes[0])
         filetype = 'OTHER'
+        filename = ''
         if(':w:' in nodupes[0]):
             filetype = 'Word'
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
         elif ':x:' in nodupes[0]:
             filetype = 'Excel'
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
         s1.write(row, 1, filetype)
+        s1.write(row, 2, filename)
         del nodupes[0]
         row += 1
 
     wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
-
-        
-        
-
-
 
 bot(username, password, query)
 
