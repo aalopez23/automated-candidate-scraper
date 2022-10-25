@@ -5,7 +5,7 @@ name_test1= "Two before narrow not Pamela Toro relied how except moment Dejectio
 
 def name_scrape(doc):
     names = []
-    nlp = spacy.load("en_core_web_lg") #pythong -m spacy download en_core_web_lg
+    nlp = spacy.load("en_core_web_lg") #python -m spacy download en_core_web_lg
     doc = nlp(doc)
     for ent in doc.ents:
         if ent.label_ == "PERSON" and (ent.text == "Pamela" or ent.text == "Pamela Toro"):

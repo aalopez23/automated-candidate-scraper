@@ -8,7 +8,7 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
-from PersonSc import*
+from spApplicantInfo import*
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
@@ -121,23 +121,50 @@ def bot(username, password, query):
     s1.write(row, 0, 'URL')
     s1.write(row, 1, 'File Type')
     s1.write(row, 2, 'File Name')
-    s1.write(row, 3, 'Name')
+    s1.write(row, 3, 'spacyName - URL')
+    s1.write(row, 4, 'spacyName - Content')
+    s1.write(row, 5, 'spacyEmail')
     wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1    
 
+    urls = []
+    ftypes = []
+    fnames = []
+    spacyNameUrl = []
+    spacyNameContent = []
+    spacyEmail = []
     while len(nodupes) != 0:
-        s1.write(row, 0, nodupes[0])
+        print('REMAINING: ' + str(len(nodupes)))
+        urls.append(nodupes[0])
         filetype = 'OTHER'
         filename = ''
         if(':w:' in nodupes[0]):
             filetype = 'Word'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']').replace('-', ' ').replace('_', ' ').replace('.', ' ')
         elif ':x:' in nodupes[0]:
             filetype = 'Excel'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
-        s1.write(row, 1, filetype)
-        s1.write(row, 2, filename)
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']').replace('-', ' ').replace('_', ' ').replace('.', ' ')
+        ftypes.append(filetype)
+        fnames.append(filename)
+        spacyNameUrl.append(name_scrape(filename))
         del nodupes[0]
+
+
+    #Print to Excel
+    while len(urls) != 0:
+        s1.write(row, 0, urls[0])
+        s1.write(row, 1, ftypes[0])
+        s1.write(row, 2, fnames[0])
+        snu = ''
+        while(len(spacyNameUrl[0]) != 0):
+            snu += spacyNameUrl[0][0] + ', '
+            del spacyNameUrl[0][0]
+        s1.write(row, 3, snu)
+
+        del urls[0]
+        del ftypes[0]
+        del fnames[0]
+        del spacyNameUrl[0]
         row += 1
 
     wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
