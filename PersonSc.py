@@ -8,5 +8,11 @@ def name_scrape(test):
     for ent in doc.ents:
         if ent.label_ == "PERSON":
             print(ent.text, ent.label_)
+        elif ent.label_ == "PERSON" and (ent.text == "Pamela" or ent.text == "Pamela Toro"):
+            ## Don't do anything.
+            print("Picked up Pamela's name.")
+        elif ent.label_ == "PERSON" and (ent.text == "Cilinda" or ent.text == "Cilinda Brown"):
+            ## Don't do anything.
+             print("Picked up Cilinda's name.")
             
 name_scrape(test1)
