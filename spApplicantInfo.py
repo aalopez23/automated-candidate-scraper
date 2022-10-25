@@ -1,7 +1,7 @@
 import spacy #pip install spacy
 import re
 
-name_test1= "Two before narrow not relied how except moment Dejection assurance led certainly So gate at not only nonpoint. Betrayed at properly it of Jonathan Nguyen graceful on. Dinner abroad depart ye turned hearts as wished Therefore would allowance too perfectly gentleman supposing man his now Antonio Lopez Families goodness all eat out bed steepest servants. Explained the incommode sir improving northward immediate eat Man denoting received you sex possible you Shew Park own loud son door less yet"
+name_test1= "Two before narrow not Pamela Toro relied how except moment Dejection assurance led Cilinda Brown certainly So gate at not only nonpoint. Betrayed at properly it of Jonathan Nguyen graceful on. Dinner abroad depart ye turned hearts as wished Therefore would allowance too perfectly gentleman supposing man his now Antonio Lopez Families goodness all eat out bed steepest servants. Explained the incommode sir improving northward immediate eat Man denoting received you sex possible you Shew Park own loud son door less yet"
 
 def name_scrape(doc):
     nlp = spacy.load("en_core_web_lg") #pythong -m spacy download en_core_web_lg
