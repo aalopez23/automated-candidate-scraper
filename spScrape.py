@@ -8,7 +8,7 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
-from PersonSc import*
+from spApplicantInfo import*
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
