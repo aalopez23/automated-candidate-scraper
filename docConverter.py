@@ -1,10 +1,13 @@
-### Testing
+#### Working Converter
+
+import docx2txt as doc # pip install aspose-words
+import pypandoc as py # pip install aspose-words
+import aspose.words as aw # pip install aspose-words
 
 
-import docx2txt as doc
-import pypandoc as py
-
-docFileName = 'Adavantech_Matthew Williams_IT TSS.docx'
-
-output = py.convert_file(docFilename, 'plain', outputfile="somefile.txt")
-assert output == ""
+# Run this code: 
+# Takes a Word Document passed in
+# Converts into .txt file as desired name
+# Saves txt file into same directory 
+doc = aw.Document("Matthew_Williams.docx")
+doc.save("Output.txt")
