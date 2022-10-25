@@ -1,4 +1,4 @@
-#### Working Converter
+#### Working Converter (last edit/progress made by Jonathan. please uodate any changes/edits to this file.)
 
 import docx2txt as doc # pip install aspose-words
 import pypandoc as py # pip install aspose-words
