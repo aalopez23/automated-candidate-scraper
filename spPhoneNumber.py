@@ -28,7 +28,7 @@ print(phone_scrape(phone_example))  """
 ### 3.) It has to end with a number between 0-9.
 ### 4.) It may contain 0-9 (space) .-() in the middle.
 
-def phone_scrape(doc):
+def phone_scrape(doc):  ### Returns an array
     numbers = re.findall(r'[\+\(]?[1-9][0-9 .\-\(\)]{8,}[0-9]', doc)
     print(numbers)
     
