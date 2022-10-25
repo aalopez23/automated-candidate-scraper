@@ -22,7 +22,7 @@ def name_scrape(doc):
 name_scrape(name_test1)
 
 
-email_test1 = "Please contact us at contact@tutorialspoint.com for further information."
+email_test1 = "Please contact us at contact@tutorialspoint.com for further information. jsn006@ucsd.edu and I also want to test this one: 36363@fjd"
 def email_scrape(doc):
     emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", doc)
     print (emails[0])
