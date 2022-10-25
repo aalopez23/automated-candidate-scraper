@@ -2,7 +2,7 @@ import phonenumbers as pn
 import re
 
 # Test Strings
-phone_example = "3774728288"  # U.S phone 
+phone_example = "12355"  # U.S phone 
 text = "Hi Jane, thank you for reaching out to learn more about Data Science Sphere! The best way to learn more about us is to call us. Feel free to call us at 020 8366 1177 or at 020 8785 7465. There will be no obligation to sign up to our newsletter after the call! Best regards."
 
 
