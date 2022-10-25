@@ -18,6 +18,8 @@ query = '("system administrator" OR "systems administrator" OR "IT" OR "Informat
 #Start runtime timer
 start = time.time()
 
+test = '123456'
+
 def countdown(t):
     while t != 0:
         mins, secs = divmod(t, 60)
@@ -124,15 +126,18 @@ def bot(username, password, query):
     s1.write(row, 3, 'spacyName - URL')
     s1.write(row, 4, 'spacyName - Content')
     s1.write(row, 5, 'spacyEmail')
+    s1.write(row, 6, 'spacyPhone')
     wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1    
 
+    #Populate parallel arrays
     urls = []
     ftypes = []
     fnames = []
-    spacyNameUrl = []
+    spacyNameUrl = [] #2D array (each url has list of names)
     spacyNameContent = []
     spacyEmail = []
+    spacyPhone = []
     while len(nodupes) != 0:
         print('REMAINING: ' + str(len(nodupes)))
         urls.append(nodupes[0])
@@ -140,10 +145,10 @@ def bot(username, password, query):
         filename = ''
         if(':w:' in nodupes[0]):
             filetype = 'Word'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']').replace('-', ' ').replace('_', ' ').replace('.', ' ')
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
         elif ':x:' in nodupes[0]:
             filetype = 'Excel'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']').replace('-', ' ').replace('_', ' ').replace('.', ' ')
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
         ftypes.append(filetype)
         fnames.append(filename)
         spacyNameUrl.append(name_scrape(filename))
@@ -157,8 +162,10 @@ def bot(username, password, query):
         s1.write(row, 2, fnames[0])
         snu = ''
         while(len(spacyNameUrl[0]) != 0):
-            snu += spacyNameUrl[0][0] + ', '
+            if 'Intvw Checklist' not in spacyNameUrl[0][0]:
+                snu += spacyNameUrl[0][0] + ', '
             del spacyNameUrl[0][0]
+        snu = snu[:-2]
         s1.write(row, 3, snu)
 
         del urls[0]
