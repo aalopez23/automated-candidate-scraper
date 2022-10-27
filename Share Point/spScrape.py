@@ -67,6 +67,7 @@ def bot(username, password, query):
     actions.send_keys(Keys.RETURN)
     actions.perform()
     
+    content = []
     i = 0
     while(True):
         tabs = driver.window_handles
@@ -85,9 +86,7 @@ def bot(username, password, query):
                 counter += 1
             actions.send_keys(Keys.CONTROL + 'C') # Copies all of the text
             text = paste()
-            name_scrape(text)
-            email_scrape(text)
-            phone_scrape(text)
+            content.append(text)
             
             driver.close()
             driver.switch_to.window(tabs[0])
@@ -105,12 +104,8 @@ def bot(username, password, query):
                 counter += 1
             actions.send_keys(Keys.CONTROL, 'C') # Copies all of the text
             text = paste()
-            name = name_scrape(text)
-            email = email_scrape(text)
-            number = phone_scrape(text)
-            
-            print(name, email, number)
-            
+            content.append(text)
+                        
             actions.send_keys(Keys.ESCAPE)
             actions.perform()
 
@@ -151,6 +146,7 @@ def bot(username, password, query):
     row += 1    
 
     #Populate parallel arrays
+    #content array initialized in line 70
     urls = []
     ftypes = []
     fnames = []
@@ -182,6 +178,7 @@ def bot(username, password, query):
         s1.write(row, 2, fnames[0])
         snu = ''
         while(len(spacyNameUrl[0]) != 0):
+            #Manual Filter
             if 'Intvw Checklist' not in spacyNameUrl[0][0]:
                 snu += spacyNameUrl[0][0] + ', '
             del spacyNameUrl[0][0]

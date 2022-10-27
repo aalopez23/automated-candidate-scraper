@@ -17,4 +17,3 @@ def paste():
         text = f.read()
     
     return text
-paste()
