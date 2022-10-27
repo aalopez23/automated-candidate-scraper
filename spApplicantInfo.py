@@ -1,12 +1,12 @@
-import spacy #pip install spacy
-import re
-import phonenumbers as pn
+import spacy # pip install spacy
+import re  # built-in rgeex library
+import phonenumbers as pn # pip install phonenumbers
 
 name_test1= "Two before narrow not Pamela Toro relied how except moment Dejection assurance led Cilinda Brown certainly So gate at not only nonpoint. Betrayed at properly it of Jonathan Nguyen graceful on. Dinner abroad depart ye turned hearts as wished Therefore would allowance too perfectly gentleman supposing man his now Antonio Lopez Families goodness all eat out bed steepest servants. Explained the incommode sir improving northward immediate eat Man denoting received you sex possible you Shew Park own loud son door less yet"
 name_test2= "https://www.linkedin.com/in antonio lopez 13a48a212/"
 def name_scrape(doc):
     names = []
-    nlp = spacy.load("en_core_web_lg") #pythong -m spacy download en_core_web_lg
+    nlp = spacy.load("en_core_web_lg") #python -m spacy download en_core_web_lg
     doc = nlp(doc)
     for ent in doc.ents:
         if ent.label_ == "PERSON" and (ent.text == "Pamela" or ent.text == "Pamela Toro"):
