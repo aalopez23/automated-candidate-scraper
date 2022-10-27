@@ -13,7 +13,10 @@ def paste():
     pyautogui.hotkey('ctrl','s')        #save the file
     pyautogui.hotkey('alt','f4')        #close the file and back to program
     
-    with open('doc.txt', 'r') as f:
-        text = f.read()
-    
+    try:
+        with open('doc.txt', 'r') as f:
+            text = f.read()
+    except:
+        text = 'ERROR'
+        
     return text

@@ -60,8 +60,6 @@ def bot(username, password, query):
     urls = []
     #Selecting the list and the not the specific element
     # Don't ask why it works but it works
-    driver.find_element(By.CLASS_NAME, "root-125").click()
-    actions.send_keys(Keys.DOWN)
     actions.send_keys(Keys.DOWN)
     actions.send_keys(Keys.UP)
     actions.send_keys(Keys.RETURN)
@@ -80,11 +78,10 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
             
-            counter = 0
-            while(counter < 10):
-                actions.send_keys(Keys.CONTROL + 'A') # Selects all of the text
-                counter += 1
-            actions.send_keys(Keys.CONTROL + 'C') # Copies all of the text
+            for x in range(3):
+                actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                time.sleep(0.25)
+            actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
             text = paste()
             content.append(text)
             
@@ -98,11 +95,9 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
             
-            counter = 0
-            while(counter < 10):
-                actions.send_keys(Keys.CONTROL, 'A') # Selects all of the text
-                counter += 1
-            actions.send_keys(Keys.CONTROL, 'C') # Copies all of the text
+            for x in range(10):
+                actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+            actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
             text = paste()
             content.append(text)
                         
@@ -114,8 +109,7 @@ def bot(username, password, query):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
             countdown(3) # Wait for the page to load (need tweaking)
             # Reintialize the pointer to the next element
-            driver.find_element(By.CLASS_NAME, "root-125").click()
-            actions.send_keys(Keys.DOWN)
+            
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
             actions.send_keys(Keys.RETURN)
@@ -141,7 +135,11 @@ def bot(username, password, query):
     s1.write(row, 0, 'URL')
     s1.write(row, 1, 'File Type')
     s1.write(row, 2, 'File Name')
-    s1.write(row, 3, 'Name')
+    s1.write(row, 3, 'URL - Names')
+    s1.write(row, 4, 'Content - Names')
+    s1.write(row, 5, 'Content - Email')
+    s1.write(row, 6, 'Content - Phone')
+
     wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1    
 
@@ -168,7 +166,11 @@ def bot(username, password, query):
         ftypes.append(filetype)
         fnames.append(filename)
         spacyNameUrl.append(name_scrape(filename))
+        spacyNameContent.append(name_scrape(content[0]))
+        spacyEmail.append(email_scrape(content[0]))
+        spacyPhone.append(phone_scrape(content[0]))
         del nodupes[0]
+        del content[0]
 
 
     #Print to Excel
@@ -176,6 +178,7 @@ def bot(username, password, query):
         s1.write(row, 0, urls[0])
         s1.write(row, 1, ftypes[0])
         s1.write(row, 2, fnames[0])
+
         snu = ''
         while(len(spacyNameUrl[0]) != 0):
             #Manual Filter
@@ -184,11 +187,17 @@ def bot(username, password, query):
             del spacyNameUrl[0][0]
         snu = snu[:-2]
         s1.write(row, 3, snu)
+        s1.write(row, 4, spacyNameContent[0])
+        s1.write(row, 5, spacyEmail[0])
+        s1.write(row, 6, spacyPhone[0])
 
         del urls[0]
         del ftypes[0]
         del fnames[0]
         del spacyNameUrl[0]
+        del spacyNameContent[0]
+        del spacyEmail[0]
+        del spacyPhone[0]
         row += 1
 
     wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
