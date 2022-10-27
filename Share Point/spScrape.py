@@ -9,6 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
 from spApplicantInfo import*
+from Paste import*
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
@@ -17,8 +18,6 @@ query = '("system administrator" OR "systems administrator" OR "IT" OR "Informat
 
 #Start runtime timer
 start = time.time()
-
-test = '123456'
 
 def countdown(t):
     while t != 0:
@@ -79,6 +78,17 @@ def bot(username, password, query):
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
+            
+            counter = 0
+            while(counter < 10):
+                actions.send_keys(Keys.CONTROL + 'A') # Selects all of the text
+                counter += 1
+            actions.send_keys(Keys.CONTROL + 'C') # Copies all of the text
+            text = paste()
+            name_scrape(text)
+            email_scrape(text)
+            phone_scrape(text)
+            
             driver.close()
             driver.switch_to.window(tabs[0])
 
@@ -88,6 +98,19 @@ def bot(username, password, query):
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
+            
+            counter = 0
+            while(counter < 10):
+                actions.send_keys(Keys.CONTROL, 'A') # Selects all of the text
+                counter += 1
+            actions.send_keys(Keys.CONTROL, 'C') # Copies all of the text
+            text = paste()
+            name = name_scrape(text)
+            email = email_scrape(text)
+            number = phone_scrape(text)
+            
+            print(name, email, number)
+            
             actions.send_keys(Keys.ESCAPE)
             actions.perform()
 
@@ -123,55 +146,23 @@ def bot(username, password, query):
     s1.write(row, 0, 'URL')
     s1.write(row, 1, 'File Type')
     s1.write(row, 2, 'File Name')
-    s1.write(row, 3, 'spacyName - URL')
-    s1.write(row, 4, 'spacyName - Content')
-    s1.write(row, 5, 'spacyEmail')
-    s1.write(row, 6, 'spacyPhone')
+    s1.write(row, 3, 'Name')
     wb.save('spScrape_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1    
 
-    #Populate parallel arrays
-    urls = []
-    ftypes = []
-    fnames = []
-    spacyNameUrl = [] #2D array (each url has list of names)
-    spacyNameContent = []
-    spacyEmail = []
-    spacyPhone = []
     while len(nodupes) != 0:
-        print('REMAINING: ' + str(len(nodupes)))
-        urls.append(nodupes[0])
+        s1.write(row, 0, nodupes[0])
         filetype = 'OTHER'
         filename = ''
         if(':w:' in nodupes[0]):
             filetype = 'Word'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
         elif ':x:' in nodupes[0]:
             filetype = 'Excel'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
-        ftypes.append(filetype)
-        fnames.append(filename)
-        spacyNameUrl.append(name_scrape(filename))
+            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', '[').replace('%5D', ']')
+        s1.write(row, 1, filetype)
+        s1.write(row, 2, filename)
         del nodupes[0]
-
-
-    #Print to Excel
-    while len(urls) != 0:
-        s1.write(row, 0, urls[0])
-        s1.write(row, 1, ftypes[0])
-        s1.write(row, 2, fnames[0])
-        snu = ''
-        while(len(spacyNameUrl[0]) != 0):
-            if 'Intvw Checklist' not in spacyNameUrl[0][0]:
-                snu += spacyNameUrl[0][0] + ', '
-            del spacyNameUrl[0][0]
-        snu = snu[:-2]
-        s1.write(row, 3, snu)
-
-        del urls[0]
-        del ftypes[0]
-        del fnames[0]
-        del spacyNameUrl[0]
         row += 1
 
     wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
