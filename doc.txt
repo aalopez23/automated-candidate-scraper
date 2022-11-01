@@ -1,275 +1,228 @@
-Image download failed. 
+
+REQUISITION:    
+
+IT SPECIALIST III – TSS/NETC HAMPTON ROADS 
+
+DATE:    
+
+021522 
+
+REQUIREMENTS CHECKLIST FOR:   JONATHAN RUSSELL 
+
  
-Resume from ClearanceJobs.com  
 
-Image download failed.
  
 
-CARL A. STILES JR. 
+Unsure why I don’t see orig internal checklist intvw info... 
 
-ENGINEERING 
-34800 Heritage Oaks Ct. 
-Winchester, California 92596 
-Profile updated: Apr 9 
-
-Email: carl.a.stiles.jr@gmail.com 
-Phone: (619) 817-1103  
-
-Security Clearance 
-
-Level: Secret 
-Status: Active Security Clearance 
-Polygraph: Not Specified 
-
-Top Skills 
-
-Career Track 
-
-Category: Security-Network Management 
-Category: Systems Analysis 
-Experience: Management (Manager/Director of Staff) 
-Job Type: Contractor/Consultant 
-Job Search: Active: Actively considering job opportunities 
-
-Geography 
-
-Will Relocate: Yes 
-
-Education 
-
-Degree: Masters 
-
-Salary 
-
-Per Year: $125,000 - $150,000 
-Per Hour: $75 - $100 
-
-Military Details 
-
-Branch: Air Force 
-
-Resume Data 
-
-CARL A. STILES JR., CISSP 
  
-34800 Heritage Oaks Ct., Winchester, CA 92596 -- (619)-817-1103 -- carl.a.stiles.jr@gmail.com 
+
+101522 ASKING IF JOB IS STILL AVAIL.  
+
+Hi, Jonathan- 
+
+I plan on hiring growth onto this team, yes. 
+
+ I recall your firm countered our offer and you opted to stay; please let me know what’s changed with you? 
+
+  
+
+From: Johnathan Russell <johnathan.russell@maine.edu>  
+Sent: Monday, October 17, 2022 8:00 AM 
+ To: Pamela Toro <ptoro@advantechglobal.org> 
+ Subject: Re: ASAP IT/Sys Admin job opportunity- VA 
+
+Good morning, 
+
+ Is the SysAdmin position still available? If so, I'd like to talk further about it! 
+
  
+
+030722- Good morning, 
+
+ My company is working on something at the moment. I hope to have more information by tomorrow. I apologize for all the hassle. 
+
+   
+
+On Thu, Mar 3, 2022 at 12:17 PM Pamela Toro <ptoro@advantechglobal.org> wrote: 
+
+Hi, Jonathan- 
+
+Thanks for the heads up.  
+
+I want to be 100% certain of your position before I take this off the table, given this is such an ideal role for growth across such a long-term contract. 
+
+  
+
+And in my experience, employer counter offers are wonderful until they’re not; with the employer is now privy to their employee having interviewed for other jobs, so please confirm with that’s a risk you’re OK taking before I pull this offer, as we’d still love to have you! 
  
+
+From: Johnathan Russell <johnathan.russell@maine.edu> 
+ Sent: Thursday, March 3, 2022 10:29 AM 
+ To: Cilinda Brown <cbrown@advantechglobal.org> 
+ Subject: Re: Onboarding paperwork Advantech  
+
+  
+
+Good morning, 
+
+  
+
+CDW has decided that I am too valuable to lose and countered your offer with another position. I truly appreciate the offer and all the work that we went through throughout this process. Unfortunately, I am choosing to stay with CDW and I apologize for any inconvenience this may cause. Thank you for the opportunity, I hope you'll find another candidate very soon. 
+
+  
+
+Very respectfully, 
+
+  
+
+Johnathan Russell 
+
+  
+
+On Thu, Mar 3, 2022 at 10:34 AM Cilinda Brown <cbrown@advantechglobal.org> wrote: 
+
+Hello Johnathan 
+
+  
+
+Congratulations, and welcome to Advantech! 
+
  
-SUMMARY OF QUALIFICIATIONS 
+
  
-Creative and diligent information technology professional with over twelve years' experience managing Department of Defense and corporate networks. Solid interpersonal skills coupled with effective problem solving capabilities. Self-motivated, enthusiastic, goal driven, team player, and displays unique leadership qualities in high stress, fast paced work environments. An optimistic approach to new projects that increase productivity for revenue generating business functions. Takes pride in resolving multi-level network system issues and deploying new IT tools on-schedule while avoiding interruptions. Quality verbal and written communicator between technical and managerial offices, translating operational needs into high tech solutions.  
+
  
- 
- 
+
+REQUIREMENTS 
+
+QUALIFICATIONS SUMMARY 
+
+TOTAL IT YOE 
+
+~6 YoE  
+
+SYSTEM ADMIN YOE 
+
+NMCI experience includes predominately AD and running scripts 
+
+SERVER BUILDS YOE 
+
+Personally, not OTJ 
+
+STIGGING, PATCHING, SCANNING SERVERS 
+
+Limited – would request more training 
+
+NETWORKING YOE 
+
+Yes- ensuring viable ports and VLAN, ensuring proper authentication for print/scan jobs 
+
+WINDOWS VERSIONS 
+
+7/8/10; some 11 
+
 EDUCATION 
- 
-* Master of Science - Information Systems 
- 
-University of Phoenix - Phoenix, AZ 
- 
-* Bachelor of Arts - Liberal Studies 
- 
-Limestone College - Gaffney, SC 
- 
- 
- 
-CERTIFICATION 
- 
-* (ISC)2 Certified Information Systems Security Professional (CISSP) #339554 
- 
-* Microsoft Certified Professional (MCP)  
- 
-* CompTIA - Security+  
- 
- 
- 
-SKILLS 
- 
--- Microsoft Windows NT, 2000, XP, Vista, 7 -- Microsoft Windows Server NT, 2000, 2003, 2008  
- 
--- Microsoft Exchange Server -- Microsoft SQL Server -- Check Point Firewall-1 -- Cisco routers and switches -- Symantec Endpoint Protection -- Symantec Backup Exec for Windows -- VMware 
- 
--- SolarWinds Network Management -- Websense Enterprise Web Filter -- DNS & DHCP -- Nmap -- Wireshark -- OWASP -- DISA Security Technical Implementation Guides (STIG)  
- 
--- DISA Security Readiness Review (SRR) scripts -- DIACAP, NIST, & FISMA compliance 
- 
- 
- 
-MANAGEMENT/SUPERVISION 
- 
-* Scheduled IT staff to guarantee 100% customer support during standard work hours and the 24/7 emergency response team.  
- 
-* Assigned roles and responsibilities to team members, delegating project work flow to ensure accuracy and on-time completion of assignments. 
- 
- 
- 
-PROFESIONAL TRAINING  
- 
-* DISA Assured Compliance Assessment Solution (ACAS) 
- 
-* Committee on National Security Systems (CNSS) 4015 System Certifier 
- 
-* Committee on National Security Systems (CNSS) 4016 Risk Analyst 
- 
-* HQMC C4 Cyber Assessment Methodology Course 
- 
-* Unix System & Security Administration 
- 
-* Microsoft Windows Server & Exchange Administration 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-PROFESSIONAL EXPERIENCE 
- 
- 
- 
-SCIENCE APPLICATIONS INTERNATIONAL CORPORATION (SAIC) - VOLT 
- 
-SR. INFORMATION SECURITY ENGINEER SEP 2012 - PRESENT 
- 
- 
- 
-* Project technical lead of a 15 member information security engineering team at SPAWAR Systems Center (SSC) Pacific verifying the security posture of over 5,000 computer systems.  
- 
-* Vulnerability assessment architecture & implementation saved Research Development Testing & Evaluation network $12.5 million in cyber security compliance expenditures. 
- 
-* Performed risk assessment, risk remediation, and cyber security training presentations for over 400 UNIX, Linux, Mac, and Windows system administrators. 
- 
-* Tenable Network Security implementation on Linux platform. Installation, configuration, and management of Tenable SecurityCenter and Nessus Vulnerability Scanner infrastructure. 
- 
- 
- 
-CYNERGY GROUP OF BALTIMORE 
- 
-SR. CYBER SECURITY ANALYST MAR 2012 - SEP 2012 
- 
- 
- 
-* Project management of C&A packages for a $2.1M program comprised of over 80 information system projects in MCCAST XACTA. 
- 
-* Analyzed vulnerability scans to include DISA Gold Disk, eEye Digital Security Retina, Flying Squirrel, and other vulnerability assessment tools. 
- 
-* Conduct cyber security assessments, CCRI preparation, HQMC Blue Team inspection consultation, heuristic remediation & mitigation strategy, and cyber security training. 
- 
-* Generate Continuity of Operations Plan, Disaster Recovery Plan, Incident Response Plan, System Security Plan, Risk Management Plan, POA&M, and related C&A documentation.  
- 
- 
- 
-ENGINEERING DOCUMENTATION SYSTEMS INC (EDSI) 
- 
-SR. SYSTEM ANALYST NOV 2010 - MAR 2012 
- 
- 
- 
-* Managed information assurance team for computer security vulnerability scanning & remediation, DIACAP documentation to sustain confidentiality, integrity, and availability. 
- 
-* Improved vulnerability management 500% with the implementation of Active Directory, Windows Server Update Services (WSUS), and DREN project coordination. 
- 
-* Provided NMCI and legacy hardware, software, network, systems, and user support. 
- 
-* Supported database & system design, Internet, Intranet, Extranet, client server architectures & interfaces between web-based applications & legacy systems. 
- 
- 
- 
-L-3 COMMUNICATIONS 
- 
-SR. NETWORK ENGINEER JAN 2006 - NOV 2010  
- 
- 
- 
-* Managed nation-wide team of system administrators, network interconnection infrastructures and protocols, and software distribution for all modes of operation within specified IT budget. 
- 
-* Network security management of proxy server, anti-virus server, firewall appliance, and Active Directory service for corporate Windows Server enterprise WLAN.  
- 
-* Saved organization $150,000 by researching and recommending a WAN firewall configuration utilizing existing appliances at 20 offices connecting to data centers via encrypted VPN tunnels. 
- 
-* Project management of the migration of geographically dispersed information systems from SEP 11 to SEP 12 using Symantec Endpoint Protection Manager and Active Directory. 
- 
- 
- 
-ELECTRONIC DATA SYSTEMS (EDS) - ZERO CHAOS 
- 
-DESKTOP SUPPORT TECHNICIAN JUL 2005 - JAN 2006 
- 
- 
- 
-* Contacted Navy Marine Corps Intranet (NMCI) customers via phone and in person to diagnose desktop, laptop, and network issues as part of a 700,000 plus user intranet.  
- 
-* Support of Dell hardware, Windows 2000/XP operating systems, Active Directory and Remedy ticketing system for 99.9% uptime.  
- 
-* Maintained disaster recovery procedures and first line support for service interruptions such as printer routings, power outages, wiring problems, and malfunctioning servers. 
- 
- 
- 
-UNITED STATES AIR FORCE 
- 
-SYSTEMS ADMINISTRATOR AUG 2004 - JUL 2005 
- 
- 
- 
-* Directed a team of Jr. System Administrators to ensure network components met 100% compliance with both DISA information assurance and USAF security standards. 
- 
-* Evaluated, tested, and deployed software and hardware upgrades to the Windows Server infrastructure supporting the Joint Deployable Intelligence Support System (JDISS). 
- 
-* Managed $1 million network infrastructure security project, maintaining 100% accountability through diligent OPSEC practices and quarterly audits. 
- 
- 
- 
-UNITED STATES AIR FORCE 
- 
-INFORMATION SECURITY SPECIALIST MAY 2000 - AUG 2004 
- 
- 
- 
-* Information security vulnerability management for 3,900 computers on 120 Local Area Subnets on the Command, Control, Communications, and Intelligence (C4I) Network. 
- 
-* Tenacious firewall and external router configuration reduced access control list entries by 25%, decreased virus events by 10%, and improved traffic filtering speed by 400%.  
- 
-* Pivotal in $133K Network Operating Center security upgrade to firewall, Virtual Private Network, and Intrusion Detection systems. 
- 
- 
- 
-ADDITIONAL INFORMATION 
- 
-* Project Management Institute (PMI) Member ID: 2646753 
- 
-* Information Systems Security Certification Consortium (ISC)2 Member ID: 339554 
- 
-* Currently preparing for PMI Project Management Professional (PMP) Certification 
- 
-* Department of Defense Directive 8570.1 Information Assurance certification. 
- 
-* Received Level 1 Achievement Award for Information Assurance Compliance - 2011 
- 
-* Installed and configured government donated computer systems for elementary school centers. 
- 
-* Addressed high school ROTC cadets about the personal and community benefits of military service.  
- 
-* Airman Leadership School Graduate. 
- 
-* Active DOD SECRET security clearance 
- 
- 
- 
-***References Available Upon Request*** 
 
-Attachment Name 
+BS-Poli Sci  
 
-Type 
+CERTS 
 
-Resume 04/09/2013 15:58  
+Security+  
 
-Microsoft Word Document 
+CLEARANCE 
+
+Secret  
+
+NOTES 
+
+Afternoon interviews preferred. Available to begin a new position after 2 weeks to employer 
 
  
 
+Highly motivated and dedicated Computer Information Technology professional with 5 years of experience providing information technology support for Higher Education, administering Tier 1 & Tier 2 support across the Navy's NMCI network, and servicing field support to multiple military bases around the Hampton Roads area. Proven success installing and configuring network devices and troubleshooting computer problems (hardware and/or software). A team-player with the ability to communicate with individuals at all levels throughout an organization. Resourceful self-starter who continuously strives for excellence and is accustomed to exceeding expectations in a fast-paced environment. 
+
  
+
+SKILLS, CERTIFICATIONS, & SECURITY CLEARANCE 
+
+Active Secret Security Clearance 
+
+CompTIA Security + Certified 
+
+Technical Computer Support System Administration 
+
+Full User Support Network Support 
+
+Network Security Active Directory 
+
+EDUCATION 
+
+University of Maine at Farmington, Farmington ME May 2020 
+
+Bachelor of Political Science 
+
+Page Break
  
-Resume from ClearanceJobs.com  
+
+RELEVANT PROFESSIONAL EXPERIENCE 
+
+Naval Support Activity Hampton Roads August 2021 - Present 
+
+Field Systems Administrator 
+
+Provided oversight of remote implementation, configuration, maintenance, troubleshooting and/or repair in an enterprise environment 
+
+Served as company liaison with client and vendors on administrative and technical matters 
+
+Provided enterprise services to NMCI including, datacenter, network operations, service desk, cybersecurity, and managed services 
+
+ 
+
+NMCI Service Desk November 2020 - August 2021 
+
+Tier 1 Support Desk Agent 
+
+Administered remote support to users across the NMCI network including NNPI, VIP/EVIP, NIPR/SIPR 
+
+Ran scripts on user machines and uninstalled/re-installed software on user machines 
+
+Administered all aspects of active directory such as managing and editing end user accounts 
+
+Diagnosed and resolved a wide range of software, hardware, and connectivity issues while delivering technical training on hardware/software to end users 
+
+ 
+
+University of Maine at Farmington, Farmington, ME September 2016 - May 2020 
+
+Help Desk Technician 
+
+Troubleshooting and repair of issues with software applications for faculty, staff, and students 
+
+Assist with user account functions using active directory 
+
+Assisted with installing and configuring network devices to LAN 
+
+ 
+
+Ocean Breeze Water Park, Virginia Beach, VA Summer 2019 
+
+Information Technology Specialist 
+
+Oversaw and maintained all IT related equipment in the park 
+
+Installed, configured, and maintained network devices 
+
+Programmed pagers to respond to individual beepers 
+
+ 
+
+United States Naval War College, Newport, RI Summer/Winter of 2016/2017 
+
+Information Resources - Intern 
+
+Troubleshooting and repair of issues with software applications 
+
+Assisted with installing PC hardware and software 
+
+Inventoried hardware and updated records 
