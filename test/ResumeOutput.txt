@@ -1,67 +1,0 @@
-﻿  TOP SECRET-FCL HUBZONE
-  SPECIALIZED IN PROFESSIONAL SERVICES
-
-
-Evaluation Only. Created with Aspose.Words. Copyright 2003-2022 Aspose Pty Ltd.
-REQUISITION:   IT SUPPORT SPECIALISTDATE:   101022REQUIREMENTS CHECKLIST FOR:   ANDREW CHANG
-REQUIREMENTSQUALIFICATIONS SUMMARYTOTAL IT YOE<4 YoESYSTEM ADMIN~1 YoE (previous position with GDIT)SERVER BUILDSPhysical hardware workstations; not building from scratchSTIGGING, PATCHING, SCANNINGYes, including vulnerability scans, Nessus, WSUS NETWORKINGFamiliarityWINDOWS VERSIONS10, 16 EDUCATION / CERTSBS in IT, Security+, A+CLEARANCESecretSUMMARY / NOTESCan Start ASAPAndrew Chang
-IT Professional With 4 Years of IT Administration and Support Experience
-Maintains an active DoD Secret Clearance.
-Security+ and A+ certified IT professional with 4 years of technical experience, IT Administration, and highly praised customer support. 
-Bringing knowledge of Windows and Active Directory, managing IT workstations and servers, the ability to setup and troubleshoot hardware or software, as well as excellent communication skills. 
-Work Experience
-
-System Administrator
-General Dynamics Information Technology - Chesapeake, VA 
-January 2022 to September 2022
-• Identified and corrected Windows based computer/server issues in an air gapped network within a secured space.
-• Utilized VMware ESXi and Windows Server 2016 to run and manage multiple file servers and domain controllers.
-• Developed integrated system test requirements, strategies, devices, and system to ensure system stability, POAM issue tracking, CCB team member and approver.
-• Monitored and enforced security policies on workstations and servers using McAfee ePO
-• Audited system, application, and security logs via Splunk.
-• Used Tenable Nessus to identify and resolve vulnerabilities on workstations and servers
-• Ran SCAP scans to ensure security compliance with DISA Security Technical Implementation Guides (STIG) guidance and corrected findings where applicable.
-• Designed, developed, and implemented hardware, software, interfaces, and all system level requirements to provide an integrated IT solution.
-• Deployed Windows updates via WSUS.
-• Worked with ISSM to implement security policies, including System Security Plans (SSPs), security audits
-• Managed learning management system (LMS) in support of development and QA teams by managing 300+ accounts and providing technical support as needed.
-• Provided guidance and technical support to users for computer and application related issues.
-• Supported successful submission of a government project by providing technical insight on customer needs and providing potential solutions.
-
-PC Technician (Contractor) 
-Randstad - Newport News, VA 
-September 2020 to January 2022
-• Contractor for Riverside Health Systems.
-• Windows 10 Migration project and PC Refresh project.
-• Imaged PCs and deployed software via SCCM.
-• Configured PCs with specialty software for use in a medical environment including AGFA Enterprise Imaging, Midmark IQecg, and Epic.
-• Installed and set up PCs to utilize Single Sign-On via Caradigm and Imprivata.
-• Coordinated with team members to resolve issues the team faced when trying to deploy PCs.
-• Trained and documented process of PC deployment and installation of complex software for team members and new hires.
-• Worked assigned tickets in ServiceNow to resolve post-deployment issues.
-
-Tier 1 Technical Support Agent
-Perspecta - Norfolk, VA 
-July 2019 to August 2020
-• Contracted to Perspecta under Super Systems Inc. from July 2019 to January 2020, hired directly by Perspecta in February 2020.
-• Provided user troubleshooting with user accounts, Microsoft Outlook, Adobe Acrobat/Reader, Java, website access, and VPN connections.
-• Set up Microsoft 365 applications for users during transition from Office 2016.
-• Assisted users with setting up and troubleshooting PKI and encryption in relation to digital certificates, email encryption, and digital signatures
-• Edited user accounts in Active Directory for email forwarding, enabling accounts, resetting passwords.
-• Provisioned iOS devices via MDM
-• Created and escalated tickets created in HP Service Manager.
-
-Intern
-Tidewater Community College Computers for Student Success - Virginia Beach, VA 
-February 2019 to July 2019
-• Disassembled and reassembled laptop and desktops to replace missing or damaged parts.
-• Utilized equipment for destruction and cloning of hard drives.
-Education
-
-Bachelor of Science in Information Technology
-George Mason University - Fairfax, VA 
-August 2014 to May 2018
-High school diploma
-Princess Anne High School - Virginia Beach, VA 
-September 2010 to June 2014
-Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/
