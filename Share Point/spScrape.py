@@ -109,7 +109,8 @@ def bot(username, password, query):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
             countdown(3) # Wait for the page to load (need tweaking)
             # Reintialize the pointer to the next element
-            
+            driver.find_element(By.CLASS_NAME, 'root-125').click()
+            actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.UP)
             actions.send_keys(Keys.RETURN)
@@ -145,41 +146,44 @@ def bot(username, password, query):
 
     #Populate parallel arrays
     #content array initialized in line 70
-    urls = []
+    links = []
     ftypes = []
     fnames = []
     spacyNameUrl = [] #2D array (each url has list of names)
     spacyNameContent = []
     spacyEmail = []
     spacyPhone = []
-    while len(nodupes) != 0:
-        print('REMAINING: ' + str(len(nodupes)))
-        urls.append(nodupes[0])
+    while len(urls) != 0:
+        print('REMAINING: ' + str(len(urls)))
+        links.append(urls[0])
         filetype = 'OTHER'
         filename = ''
-        if(':w:' in nodupes[0]):
+        if(':w:' in urls[0]):
             filetype = 'Word'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
-        elif ':x:' in nodupes[0]:
+            filename = urls[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
+        elif ':x:' in urls[0]:
             filetype = 'Excel'
-            filename = nodupes[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
+            filename = urls[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
+        elif '%2F' in urls[0]: #WORK IN PROGRESS (getting file name of OTHER file types)
+            filename = urls[0].split('%2F')[-1].split('&q=')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
         ftypes.append(filetype)
         fnames.append(filename)
         spacyNameUrl.append(name_scrape(filename))
         spacyNameContent.append(name_scrape(content[0]))
         spacyEmail.append(email_scrape(content[0]))
         spacyPhone.append(phone_scrape(content[0]))
-        del nodupes[0]
+        del urls[0]
         del content[0]
 
-
     #Print to Excel
-    while len(urls) != 0:
-        s1.write(row, 0, urls[0])
+    while len(links) != 0:
+        s1.write(row, 0, links[0])
         s1.write(row, 1, ftypes[0])
         s1.write(row, 2, fnames[0])
 
+        #Print spacyNameUrl
         snu = ''
+        spacyNameUrl[0] = [*set(spacyNameUrl[0])]
         while(len(spacyNameUrl[0]) != 0):
             #Manual Filter
             if 'Intvw Checklist' not in spacyNameUrl[0][0]:
@@ -187,11 +191,37 @@ def bot(username, password, query):
             del spacyNameUrl[0][0]
         snu = snu[:-2]
         s1.write(row, 3, snu)
-        s1.write(row, 4, spacyNameContent[0])
-        s1.write(row, 5, spacyEmail[0])
-        s1.write(row, 6, spacyPhone[0])
 
-        del urls[0]
+        #Print spacyNameContent
+        snc = ''
+        spacyNameContent[0] = [*set(spacyNameContent[0])]
+        while(len(spacyNameContent[0]) != 0):
+            snc += spacyNameContent[0][0] + ', '
+            del spacyNameContent[0][0]
+        snc = snc[:-2]
+        s1.write(row, 4, snc)
+
+        #Print spacyEmail
+        se = ''
+        spacyEmail[0] = [*set(spacyEmail[0])]
+        while(len(spacyEmail[0]) != 0):
+            #Manual Filter
+            if 'ptoro' not in spacyEmail[0][0] and 'cbrown' not in spacyEmail[0][0]:
+                se += spacyEmail[0][0] + ', '
+            del spacyEmail[0][0]
+        se = se[:-2]
+        s1.write(row, 5, se)
+
+        #Print spacyPhone
+        sp = ''
+        spacyPhone[0] = [*set(spacyPhone[0])]
+        while(len(spacyPhone[0]) != 0):
+            sp += spacyPhone[0][0] + ', '
+            del spacyPhone[0][0]
+        sp = sp[:-2]
+        s1.write(row, 6, sp)
+
+        del links[0]
         del ftypes[0]
         del fnames[0]
         del spacyNameUrl[0]

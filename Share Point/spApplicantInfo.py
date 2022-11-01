@@ -24,8 +24,14 @@ def email_scrape(inputText):
     print (emails[0:])
     return emails
 
-def phone_scrape(inputText):
-    numbers = pn.PhoneNumberMatcher(inputText, "GB")
-    
-    for number in numbers:
-        print(number)
+###                       Regex Approach                        ###
+### Basically, the regular expression (regex) lays out these rules:
+### 1.) The matched string may start with '+' or '(' symbol.
+### 2.) It has to be followed by a number between 1-9.
+### 3.) It has to end with a number between 0-9.
+### 4.) It may contain 0-9 (space) .-() in the middle.
+
+def phone_scrape(doc):  ### Returns an array
+    numbers = re.findall(r'[\+\(]?[1-9][0-9 .\-\(\)]{8,}[0-9]', doc)
+    print(numbers)
+    return numbers
