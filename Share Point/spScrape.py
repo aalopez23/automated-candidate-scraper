@@ -78,13 +78,22 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
             
-            for x in range(3):
-                actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
-                time.sleep(0.25)
-            actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
-            text = paste()
-            content.append(text)
+            if ':x:' in url:
+                text = 'EXCEL FILE'
+            elif 'Intvw%20Checklist' in url:
+                for x in range(4):
+                    actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                    time.sleep(0.25)
+                actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+                text = paste()
+            else:
+                for x in range(3):
+                    actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                    time.sleep(0.25)
+                actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+                text = paste()
             
+            content.append(text)
             driver.close()
             driver.switch_to.window(tabs[0])
 
@@ -95,16 +104,26 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
             
-            for x in range(10):
-                actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
-            actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
-            text = paste()
+            try:
+                driver.find_elements(By.CLASS_NAME, 'ms-Button-menuIcon')[4].click()
+                driver.find_element(By.NAME, 'Open in browser').click()
+                time.sleep(1)
+                driver.switch_to.window(driver.window_handles[1])
+                for x in range(10):
+                    actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                    actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+                text = paste()
+
+                driver.close()
+                driver.switch_to.window(tabs[0])
+            except:
+                text = 'INVALID FILE'
+            
             content.append(text)
-                        
             actions.send_keys(Keys.ESCAPE)
             actions.perform()
-
-        #Checks if the last url two urls are the same
+                
+        #Checks if the last two urls are the same
         if (len(urls) > 1) and (urls[-1] == urls[-2]):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
             countdown(3) # Wait for the page to load (need tweaking)
@@ -112,9 +131,11 @@ def bot(username, password, query):
             driver.find_element(By.CLASS_NAME, 'root-125').click()
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
-            actions.send_keys(Keys.UP)
+            #actions.send_keys(Keys.DOWN)
+            #actions.send_keys(Keys.UP)
             actions.send_keys(Keys.RETURN)
             actions.perform()
+            continue
 
         if (len(urls) > 1) and (urls[-1] == urls[-2] == urls[-3]):
             break
