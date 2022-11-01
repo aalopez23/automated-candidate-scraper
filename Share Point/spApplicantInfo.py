@@ -35,3 +35,11 @@ def phone_scrape(doc):  ### Returns an array
     numbers = re.findall(r'[\+\(]?[1-9][0-9 .\-\(\)]{8,}[0-9]', doc)
     print(numbers)
     return numbers
+
+def count_ints(string):
+    nums = ['1','2','3','4','5','6','7','8','9','0']
+    cnt = 0
+    for i in range(len(string)):
+        if string[i] in nums:
+            cnt += 1
+    return cnt

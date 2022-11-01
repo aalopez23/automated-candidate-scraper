@@ -238,7 +238,8 @@ def bot(username, password, query):
         sp = ''
         spacyPhone[0] = [*set(spacyPhone[0])]
         while(len(spacyPhone[0]) != 0):
-            sp += spacyPhone[0][0] + ', '
+            if count_ints(spacyPhone[0][0]) == 10 or count_ints(spacyPhone[0][0]) == 11:
+                sp += spacyPhone[0][0] + ', '
             del spacyPhone[0][0]
         sp = sp[:-2]
         s1.write(row, 6, sp)
