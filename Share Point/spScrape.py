@@ -127,6 +127,8 @@ def bot(username, password, query):
         #Checks if the last two urls are the same
         if (len(urls) > 1) and (urls[-1] == urls[-2]):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
+            if (len(urls) > 1) and (urls[-1] == urls[-2] == urls[-3]):
+                break
             countdown(3) # Wait for the page to load (need tweaking)
             # Reintialize the pointer to the next element
             driver.find_element(By.CLASS_NAME, 'root-125').click()
@@ -137,9 +139,6 @@ def bot(username, password, query):
             actions.send_keys(Keys.RETURN)
             actions.perform()
             continue
-
-        if (len(urls) > 1) and (urls[-1] == urls[-2] == urls[-3]):
-            break
 
         actions.send_keys(Keys.DOWN)
         print('DOWN')
