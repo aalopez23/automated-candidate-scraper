@@ -77,6 +77,7 @@ def bot(username, password, query):
             url = driver.current_url
             urls.append(url)
             print(str(i + 1) + ": " + url)
+             
             
             if ':x:' in url:
                 text = 'EXCEL FILE'
