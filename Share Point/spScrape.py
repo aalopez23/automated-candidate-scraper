@@ -186,8 +186,8 @@ def bot(username, password, query):
         elif ':x:' in urls[0]:
             filetype = 'Excel'
             filename = urls[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
-        elif '%2F' in urls[0]: #WORK IN PROGRESS (getting file name of OTHER file types)
-            filename = urls[0].split('%2F')[-1].split('&q=')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
+        else: #WORK IN PROGRESS (getting file name of OTHER file types)
+            filename = urls[0].split('aspx?')[1].split('&q=')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
         ftypes.append(filetype)
         fnames.append(filename)
         spacyNameUrl.append(name_scrape(filename))
