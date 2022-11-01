@@ -18,9 +18,9 @@ def delay():
 #USER INPUTS
 #Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
 
-username = 'Ptage92121'
-password = 'Advantech2022$'
-query = '(system OR network OR systems OR ism OR "it" OR "information technology" OR 3c0 OR desktop OR user) AND (troubleshooting OR troubleshoot OR troubleshot OR ACAS OR SCAP OR LAN OR LANs OR server OR servers) AND (Security+ Certification OR Sec+ OR Security+ OR CSA+ OR GICSP OR GSEC OR SSCP OR "CCNA Security" OR ccna-security OR CISSP OR CCNP OR CASP OR CISM OR GSLC)'
+username = 'cba92037'
+password = 'g#M8q2qQ'
+query = 'Collect, process and analyze construction program data to present current and forecasted schedule and financial information in the form of reports, data tables and graphs combined within presentations or reports. Conduct data analytics using proprietary systems, exported data, complicated multi-sheet Excel documents, Pivot tables, timelines, trends, and interdependencies for leadership and stakeholders to incorporate into decision-making process. Distribute output reports to leadership and operations groups utilizing multiple tools including email, SharePoint, and Flank Speed to ensure outbound communication is effective and timely. Maintain, update, and improve complicated Excel documents to adjust for new projects, change in project grouping, modification to client business rules and gov’t financial fiscal year changes. Calculate Work in Progress (WIP) totals to compare with plan (budget), Schedule Performance Index, Cost Performance Index, in addition to several KPIs utilizing data collected from multiple systems and sources and populate tables and forms to present to the client, including Requests for Information, Proposed Changes, Project Modifications, Cost and Time Growth. Create Excel Queries to automate client’s needs to expedite dynamic report and filtration processes to locate anomalies and manage by exception any errors that surface. Review with Project Controls personnel any changes to project forecasts and completion times to advice and adjust Excel systems to correctly calculate Cost Growth, Time Growth and other KPIs and parameters.'
 
 def bot(username, password, query):
     #Create Driver
@@ -44,16 +44,19 @@ def bot(username, password, query):
     time.sleep(delay())
 
     #Boolean Search Page, w/ Query
-    driver.get('https://www.clearancejobs.com/resumes/advanced-search/boolean')
+    #driver.get('https://www.clearancejobs.com/resumes/advanced-search/boolean')
+    #Intellisearch
+    driver.get('https://www.clearancejobs.com/resumes/advanced-search/')
     time.sleep(delay())
     driver.find_element(By.CLASS_NAME, 'cj-textarea__inner').send_keys(query)
     time.sleep(delay())
-    time.sleep(50) #Extra Time to Input Location
+    time.sleep(60) #Extra Time to Input Location
     driver.find_element(By.CLASS_NAME, 'btn-info').click()
     time.sleep(delay())
 
     #Change to 50 per page
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div[3]/div[3]/div/div[2]/div[2]/div[1]/div/span').click()
+    driver.find_element(By.XPATH, '/html/body/div[2]/div/div[3]/div[3]/div/div[2]/div[2]/div[1]/div/span').click()
+    
     time.sleep(delay())
     driver.find_element(By.XPATH, '//*[text()="50 per page"]').click()
     time.sleep(10)
