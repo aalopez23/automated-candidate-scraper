@@ -186,7 +186,7 @@ def bot(username, password, query):
             filetype = 'Excel'
             filename = urls[0].split('file=')[1].split('&action')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ')
         else: #WORK IN PROGRESS (getting file name of OTHER file types)
-            filename = urls[0].split('aspx?')[1].split('&q=')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ').replace('%2F', ' ').replace('%2B', ' ').replace('%2E', ' ').replace('%5F', ' ')
+            filename = urls[0].split('.aspx?')[1].split('&q=')[0].replace('%20', ' ').replace('%23', '#').replace('%5B', ' ').replace('%5D', ' ').replace('-', ' ').replace('_', ' ').replace('.', ' ').replace('(', ' ').replace(')', ' ').replace('%2F', ' ').replace('%2B', ' ').replace('%2E', ' ').replace('%5F', ' ').replace('%2D', ' ')
         ftypes.append(filetype)
         fnames.append(filename)
         spacyNameUrl.append(name_scrape(filename))
@@ -207,7 +207,7 @@ def bot(username, password, query):
         spacyNameUrl[0] = [*set(spacyNameUrl[0])]
         while(len(spacyNameUrl[0]) != 0):
             #Manual Filter
-            if 'Intvw Checklist' not in spacyNameUrl[0][0]:
+            if 'Intvw Checklist' not in spacyNameUrl[0][0] and 'RESUMES' not in spacyNameUrl[0][0]:
                 snu += spacyNameUrl[0][0] + ', '
             del spacyNameUrl[0][0]
         snu = snu[:-2]

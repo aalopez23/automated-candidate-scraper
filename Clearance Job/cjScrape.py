@@ -84,14 +84,15 @@ def bot(username, password, query):
     s1.write(row, 10, "Military Branch")
     s1.write(row, 11,"Ideal Locations")
     s1.write(row, 12,"Last Profile Update")
-    wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.csv')
     row += 1
 
     #Call wbPush() for each CJ page
+    sum = 0
     while row >= 0:
         row = pagePush(driver, wb, s1, row)
+        sum += row
 
-    wb.save('cjScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
+    wb.save('cjScrape_(' + str(sum) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook

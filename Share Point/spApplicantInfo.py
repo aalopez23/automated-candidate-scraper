@@ -14,7 +14,6 @@ def name_scrape(inputText):
             ## Don't do anything.
              print("Picked up Cilinda's name.")
         elif ent.label_ == "PERSON":
-            print(ent.text)
             names.append(ent.text)
     print(names)
     return names

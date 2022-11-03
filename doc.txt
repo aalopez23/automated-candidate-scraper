@@ -1,143 +1,275 @@
-FImage download failed. 
- 
-Resume from ClearanceJobs.com  
+JULIO VALDEZ 
 
-Image download failed.
- 
+Virginia Beach, VA 23464 
 
-Jennifer Gordon 
+757-472-6050 
 
-Technical Project Manager 
-8675 Lake Ashmere Dr Apt 27 
-San Diego, California 92119 
-Profile updated: Jun 16 
+juliovaldez@live.com 
 
-Email: jenngordon79@yahoo.com 
-Mobile: (858) 357-6508  
-
-Security Clearance 
-
-Level: Top Secret 
-Status: Current Security Clearance 
-Agency: Dept of Defense 
-Expires: May, 2013 
-Polygraph: None 
-Notes: Interim TS. I was just recently investigated before this last job ended June 26, 2009. I am unsure of the clearance expiration date. 
-
-Top Skills 
-
-Career Track 
-
-Category: Systems Engineer 
-Category: Project/Program Management 
-Experience: Mid Level Career (5+ yrs experience) 
-Job Type: Employee 
-Job Search: Active: Actively considering job opportunities 
-
-Geography 
-
-Will Relocate: Yes 
-Job Location: No Preference 
-Ideal Locations: CA-San Diego, CA-Camp Pendleton, CA-Central Coast, CA-El Segundo, CA-Monterey, CA-Orange County, CA-Santa Barbara, CO-Colorado Springs, MD-Baltimore, MD-Annapolis, MD-Greenbelt, MD-Suitland, TX-San Antonio, TX-Austin, TX-South/Corpus Christi, VA-Crystal City, VA-McLean/Arlington, VA-Virginia Beach, VA-Norfolk/Hampton Roads, IL-Chicago 
-
-Education 
-
-Degree: Masters 
-
-Salary 
-
-Per Year: Unspecified 
-Per Hour: Unspecified 
-
-Military Details 
-
-Branch: DoD Civilian 
-Pay Grade: No Rank Held 
-
-Resume Data 
-
-Jennifer Gordon 
-8675 Lake Ashmere Dr, Apt 27, San Diego, CA 92119 
-jenngordon79@yahoo.com 
-858-357-6508 
- 
 SUMMARY 
-Senior Systems Engineer with an interim Top Secret (Navy) clearance and over 8-years experience with defense-related projects for air, space, ships, and ground systems providing engineering, project management, training, and leadership for Information Technology (IT), Software Engineering, Network Engineering, Systems Engineering, and Space Systems fields. Objective is to find a team-oriented environment to assist in delivering new technology as a Project Manager or Senior Systems Engineer 
- 
-EDUCATION 
-MS Systems Engineering, Naval Postgraduate School (NPS), Monterey, CA September 2006  
-Space Systems Focus, GPA: 3.82/4.0  
-BS Electrical Engineering, Southern Illinois University Carbondale (SIUC) May 2001  
-Power & Radio Frequency (RF) Engineering Focus, GPA: 3.64/4.0 
- 
-EXPERIENCE 
-SBG Technology Solutions, Defense Contractor December 2008 June 2009 (Subcontract to Accenture, Downsized June 2009) San Diego, CA 
-Senior Systems Engineer, Test and Evaluation (T&E) Lead, Project Management  
-Created and updated Integrated Master Schedule (IMS) and developed T&E Master Plan (TEMP) timeline 
-Reviewed the systems Performance Specification, Concept of Operations (CONOPs), Capabilities Development Document (CDD) requirements, Information Support Plan (ISP) 
-Coordinated a 40+ member Space Systems team including Navy (COMOPTEVFOR & N91) and Joint (JITC) test commands to develop and author the systems T&E Master Plan (TEMP)  
- 
-X-Feds Inc, Defense Contractor July 2007 October 2008 (Downsized October 2008) San Diego, CA 
-Senior Systems Engineer , Software Engineering Project Management  
-Participated as an integral player on a multidisciplinary team as an 802.1X wireless and RF Subject Matter Expert (SME) for Certification and Accreditation (C&A) assisting with implementing T&E necessary for Navy system accreditation  
-Designed Software Change Proposal (SCP) process improvements using Visio flowcharting to train Technical Point of Contacts (TPOCs) to improve efficiency and quality of software changes 
-Delivered WhatsUp Gold (WUG) network management software market research through corresponding with multiple vendors, government stakeholders, and the Navy test lab on a product to be installed on all shipboard platforms 
- 
-Space and Naval Warfare Systems Center (SSC), Navy R&D Lab November 2004 July 2007 
-Project Engineer, Wide Area Alert Network (WAAN) San Diego, CA 
-Developed curriculum and trained Navy operators in the use of Automated Telephone Network System (ATNS) for Naval Station (NAVSTA) Norfolk and SSC-Charleston 
-Served as the Commander Navy Region Northwest (CNRNW) installation lead to install Computer Desktop Notification System (CDNS) and ATNS for Naval Facilities (NAVFAC) and Anti-Terrorism Force Protection (ATFP) efforts 
- 
-Engineer, Intra Battle Group Wireless Network (IBGWN) 
-Initiated the Ship Change Document (SCD) process for Negative Acknowledgement (NACK) Oriented Video Streaming System (NOViSS), a streaming video system using Line of Sight (LOS) AN/VRC-99 radios 
-Provided daily logistics and training support to a fleet of eight ships in a remote location and provided regular status updates to sponsors  
- 
-Systems Engineer, V22 Technical Publications 
-Examined existing training, supportability analysis, and Interactive Electronic Technical Manuals (IETM) databases to generate preliminary requirements documentation for the Collaborative Digital Data Environment (CDDE) 
-Participated in the Domain Analysis Working Group and initiated a survey of potential vendors  
- 
-Frequency Manager 
-Analyzed RF emission characteristics to assign frequencies using Spectrum XXI software 
-Identified and cataloged all existing transmitters and managed the results in an Access database 
-Drafted and submitted an antenna installation instruction to increase spectrum awareness 
- 
-Systems Engineer, High Frequency Internet Protocol (HFIP) 
-Configured several servers for an overseas HF messaging system demonstration  
-Helped troubleshoot and test all routers, servers, modems, crypto, and software programs 
-Provided quality assurance and documentation for router configurations 
- 
-New Professional, Submarine ESM Systems & Applied Electromagnetic Technology 
-Investigated Global Positioning System (GPS) options for camera surveillance integration 
-Installed fixed location infrared cameras and ensured continued use for fleet security  
-Tested shipboard Mast Clamp Current Probe (MCCP) and presented results to sponsors 
-Initiated model range multi-band antenna testing and presented results to the division 
-Demonstrated to sponsors a corona-detecting camera at the Dixon Very Low Frequency (VLF) testing facility  
- 
-TRW Space & Electronics (purchased by Northop Grumman 2002) June 2001 January 2002 
-(Downsized 2002) Redondo Beach, CA 
-Member of the Technical Staff, RF Engineer for Antennas Division for the Astrolink Satellite  
-Analyzed gain, side lobe levels, cross polarization using reflective antenna design software  
-Mapped satellite antennas to earth positions by utilizing frequency reuse techniques 
- 
-City of Naperville Electric Utility, Transmission & Distribution May 1999 August 1999 
-Electrical Engineer Intern Naperville, IL 
-Balanced three-phase electrical loads for a power distribution system  
-Developed and delivered plans for system improvements to linemen to implement 
-Designed an organizational system and checkout procedures for the power systems library 
- 
-SIUC College of Engineering August 1998 May 2001 
-Teaching Assistant & Mentor Carbondale, IL 
-Supervised Pre-Calculus, Calculus classes, and study sessions 
-Assisted students with homework and assigned worksheets 
-Tutored students in upper level math and engineering courses 
-Directed a week-long engineering camp for two consecutive years 
- 
-SKILLS/STRENGTHS 
-Certifications: Defense Acquisition Workforce SPRDE Level III, Toastmasters International Competent Toastmaster, Competent Leader, Engineer in Training (EIT) Sept 2002 
-Software: MS PowerPoint, Project, Visio, Satellite Toolkit (STK), ArcGIS, 
-Leadership Positions: 2007 UCSD extension Introduction to Satellite Communications (SATCOM) Instructor. 2006 Tactical Satellite (TacSat) Capstone Project Lead, 2004-2006 SWE San Diego County Vice President (VP) of Student Services, Undersea Toastmasters: VP of Education (2003); Treasurer (2007), 2000 SWE SIUC Section Treasurer & 2001 SWE SIUC Section President, 2001 Tau Beta Pi Engineering Honor Society Cataloger 
-Training & Conferences: Interconnecting Cisco Network Devices (ICND), CISSP Training, Introduction & Advanced courses in Satellite Toolkit (STK), Public Key Infrastructure (PKI) Training, AFCEA 2008, 2009 San Diego, C4ISR Symposium 2003, Oceans 2003, SWE National Conferences 2003, 2005, 2006, 2008, Spectrum Management Seminar 2004 
 
  
+
+TS/SCI – Top Secret Sensitive Compartmented Information Clearance – Active 
+
+Designed Systems infrastructures and networking architecture according to client's requirements. 
+
+Network analysis and management experience using SNMP, NTP, DNS, DHCP, SSH 
+
+Configured various AWS Services EC2, VPC, S3, CloudWatch, Route 53 
+
+AWS storage services including EBS, EFS, and Amazon S3 
+
+Docker Containers and PaaS including Amazon ECS 
+
  
-Resume from ClearanceJobs.com  i
+
+CLEARANCE 
+
+TS/SCI – Top Secret Sensitive Compartmented Information Clearance – Active   
+
+ 
+
+CERTIFICATE 
+
+DOD 8570 IAT 2 Compliance 
+
+CompTia Security + ce Certified 
+
+VMware Certified Professional 6 – Data Center Virtualization – VCP6-DCV 
+
+Microsoft Certified Solutions Expert – Cloud Platform and Infrastructure:2018    
+
+Microsoft Specialist – MS: Server Virtualization with Windows Server Hyper-V System Center 
+
+Microsoft Certified Solutions Associate – MCSA: Windows Server 2012 
+
+AWS Solutions Architect Professional - Expected Exam Date: Mid - 2022 
+
+Working Knowledge of Python programming language 
+
+ 
+
+EDUCATION 
+
+ 
+
+ECPI University, Virginia Beach, VA 
+
+Bachelor of Science Degree in Computer Information Science, January 2012 
+
+Concentration:  Network Security 
+
+Related Coursework: Network Security, Switching and Routing, Unix Administration, Windows Client and Server, Business Management, Customer Service 
+
+ 
+
+Self-Taught AWS Solution Architect skills 
+
+Configured various AWS Services EC2, VPC, S3, CloudWatch, Route 53 
+
+Maintain AWS accounts and Organizations 
+
+AWS storage services including EBS, EFS, and Amazon S3 
+
+Monitoring, Logging and Auditing including CloudWatch 
+
+Cost Management including how AWS services are priced, consolidated billing, and AWS Budgets 
+
+Docker Containers and PaaS including Amazon ECS 
+
+AWS Directory Services and Federation including Identity Federation, AWS SSO 
+
+Compute, Auto Scaling, and Load Balancing including ALB, NLB 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+EXPERIENCE 
+
+ 
+
+SimVentions, Inc. 
+
+Cyber Engineer III 
+
+Virginia Beach, VA 
+
+9/2021 – Present 
+
+ 
+
+Use Security Information and Event Management (SIEM) tools to read syslog messages from network devices and take appropriate action 
+
+Network analysis and management experience using SNMP, NTP, DNS, DHCP, SSH, etc. 
+
+Perform system backups and recovery 
+
+Maintain data files and monitors system configuration to ensure data integrity 
+
+Assist with securing and hardening infrastructure technologies to the Defense Information Systems Agency (DISA) Security Technical Implementation Guide (STIG) compliance requirements and Information Assurance Vulnerability (IAV) Management (IAVM) 
+
+Create and maintain system procedural and technical documentation 
+
+Ability to work independently, as well as collaborate effectively in a team-oriented environment 
+
+Work closely with the development team to support requirements and the release schedule 
+
+Perform cybersecurity testing as required, to include vulnerability scanning (ACAS), implementation of Security Requirements Guides (SRG) and/or Security Technical Implementation Guides (STIG), and Security Content Automation Protocol (SCAP) benchmarks 
+
+ 
+
+Information Warfare Training Command (IWTC) Virginia Beach 
+
+VPSI – Vector Planning & Services, Inc. 
+
+VMware Systems Administrator – Virtual Desktop Administrator (VDI) 
+
+Virginia Beach, VA 
+
+5/2017 – 5/2021 
+
+ 
+
+Contract Awarded to SAIC 
+
+ 
+
+Information Warfare Training Command (IWTC) Virginia Beach 
+
+Science Applications International Corporation (SAIC) 
+
+IT System Engineer Senior 
+
+Virginia Beach, VA 
+
+5/2021 – 9/2021 
+
+ 
+
+Installation, maintenance, and system administration of network servers primarily including Windows server 2008/2012 operating systems, VMware server, Virtual Desktop Infrastructure (VDI) virtualization technologies, and associated network storage devices 
+
+VMware View or Horizon View, or Virtual Desktop Infrastructure 
+
+Responsible for performing vulnerability scans, remediating vulnerabilities, performing system patching, ensuring DISA STIG compliance 
+
+Perform system/data backup and recovery, maintaining active directory, creating, and modifying group policy objects, evaluating HBSS implementation, performing account 
+
+management functions, performing network troubleshooting, assisting with network infrastructure installation and configuration 
+
+Assist with fiber/cable installations and troubleshooting, and other duties as directed.   
+
+Meet weekly with the PM and IT Manager to discuss vulnerability remediation, system enhancements, and needed improvements 
+
+ 
+
+Navy Warfare Development Command (NWDC) 
+
+Alion Science & Technology 
+
+System Administrator 
+
+Norfolk, VA  
+
+10/2014 – 5/2017  
+
+ 
+
+Support, secure, and update current enterprise technologies for use in the Navy Continuous Training Environment (NCTE), and Navy Center for Advanced Modeling and Simulation (NCAMS). 
+
+Work in cooperation with Engineering and Operation divisions to assess the architecture of those systems.  
+
+Responsible for installing, configuring, and deploying new systems and servers throughout the enterprise environment.  
+
+Responsible for implementation, support, tuning, and performance for central server and client architecture components and operating systems to support the development, testing, and production delivery of enterprise-wide, mission-critical applications and services for the NCTE. 
+
+Support Redhat Enterprise Linux 5 – 6.  
+
+Active Directory functions: password resets, mailbox, share drives. 
+
+Command and Control Personal Computer (C2PC) support   
+
+Configuring VMware ESXi Servers 
+
+Managed Golden Images, Snapshots  
+
+Recomposed Images in VMware vSphere, Horizon view  
+
+Maintain Virtual Desktop Infrastructure (VDI)  
+
+Provide Security Technical Implementation guidelines (STIGs) for standardized secure installation and maintenance. 
+
+ 
+
+World IT Solutions, Navy Marine Corps Intranet (NMCI) HP Contract  
+
+NAVY Secure Operations (SOC) Tier 2 Help Desk Administrator 
+
+Norfolk, VA  
+
+9/2012 – 10/2014  
+
+ 
+
+Provide desk side end-user technical support for PCs, Laptops, Printers, Peripherals, PDA 
+
+Perform accurate and expedient installation and break/fix while ensuring customers delight. 
+
+Maintaining Information Security (INFOSEC) with Symantec Endpoint Protection software.  
+
+Host Intrusion Prevention - McAfee HIPS 
+
+Provide Firewall Protection using Symantec 
+
+Solve technical problems on an assigned hardware and software platforms  
+
+ 
+
+Senior Help Desk Administrator – Secure Operations (SOC) 
+
+Provide support for the NAVY (NMCI SIPR) Classified Network 
+
+Provide higher level resolution assistance to complex issues.    
+
+Work independently and in a team environment to provide fast and accurate solutions 
+
+ 
+
+ECPI University, Virginia Beach, VA 
+
+Network Security Intern, CIS Department 
+
+Virginia Beach, VA 
+
+2012 – 2011 
+
+ 
+
+Perform work through 400 level Network Security Labs and implement on equipment. 
+
+Assisted user with VMWARE issues  
+
+ 
+
+United States Navy 
+
+Information Technology Specialist 
+
+Virginia Beach, VA 
+
+2002 – 2010 
+
+Designing, installing, operating and maintaining state-of-the-art information systems technology including local and wide area networks, mainframe, mini and microcomputer systems and associated peripheral devices 
+
+Writing programs to handle the collection, manipulation, and distribution of data for a wide variety of applications and requirements 
+
+Performing the functions of a computer system analyst 
+
+ 
