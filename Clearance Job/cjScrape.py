@@ -22,7 +22,7 @@ def delay():
 username = 'cba92037'
 password = 'g#M8q2qQ'
 query = 'Collect, process and analyze construction program data to present current and forecasted schedule and financial information in the form of reports, data tables and graphs combined within presentations or reports. Conduct data analytics using proprietary systems, exported data, complicated multi-sheet Excel documents, Pivot tables, timelines, trends, and interdependencies for leadership and stakeholders to incorporate into decision-making process. Distribute output reports to leadership and operations groups utilizing multiple tools including email, SharePoint, and Flank Speed to ensure outbound communication is effective and timely. Maintain, update, and improve complicated Excel documents to adjust for new projects, change in project grouping, modification to client business rules and gov’t financial fiscal year changes. Calculate Work in Progress (WIP) totals to compare with plan (budget), Schedule Performance Index, Cost Performance Index, in addition to several KPIs utilizing data collected from multiple systems and sources and populate tables and forms to present to the client, including Requests for Information, Proposed Changes, Project Modifications, Cost and Time Growth. Create Excel Queries to automate client’s needs to expedite dynamic report and filtration processes to locate anomalies and manage by exception any errors that surface. Review with Project Controls personnel any changes to project forecasts and completion times to advice and adjust Excel systems to correctly calculate Cost Growth, Time Growth and other KPIs and parameters.'
-search_type = False #----TRUE = Boolean, FALSE = Intellisearch----
+search_type = True #----TRUE = Boolean, FALSE = Intellisearch----
 
 def bot(username, password, query):
     #Create Driver
@@ -87,13 +87,8 @@ def bot(username, password, query):
     row += 1
 
     #Call wbPush() for each CJ page
-    sum = 0
     while row >= 0:
         row = pagePush(driver, wb, s1, row)
-        sum += row
-
-    wb.save('cjScrape_(' + str(sum) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
-
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
@@ -208,8 +203,12 @@ def pagePush(driver, wb, s1, row):
 
     #Check if last page
     if len(apps) < 50:
-        row = -1
+        saveFile(wb, row)
     return row
+
+def saveFile(wb, row):
+    wb.save('cjScrape_(' + str(row) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
+
 
 bot(username, password, query)
 

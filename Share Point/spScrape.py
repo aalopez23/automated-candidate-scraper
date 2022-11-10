@@ -14,7 +14,7 @@ from Paste import*
 #Login Credentials
 username = 'stran@advantechglobal.org'
 password = 'steventran2022$'
-query = '("system administrator" OR "systems administrator" OR "IT" OR "Information Technology" OR 3c0 OR desktop OR user OR network) AND (norfolk OR virginia beach"" OR hampton OR chesapeake OR oceana OR "dam neck" OR "va beach" OR "deer creek" OR portsmouth OR "indian river" OR "great neck" OR 757)'
+query = 'Andrew AND Ireland AND .msg'
 
 #Start runtime timer
 start = time.time()
@@ -105,20 +105,30 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
             
-            try:
-                driver.find_elements(By.CLASS_NAME, 'ms-Button-menuIcon')[4].click()
-                driver.find_element(By.NAME, 'Open in browser').click()
-                time.sleep(1)
-                driver.switch_to.window(driver.window_handles[1])
+            if 'msg' in url:
+                actions.send_keys(Keys.TAB)
+                actions.send_keys(Keys.TAB)
+                actions.perform()
                 for x in range(10):
                     actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
                     actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
                 text = paste()
+                driver.find_elements(By.CLASS_NAME, 'ms-Button-icon')[5].click()                
+            else:
+                try:
+                    driver.find_elements(By.CLASS_NAME, 'ms-Button-menuIcon')[4].click()
+                    driver.find_element(By.NAME, 'Open in browser').click()
+                    time.sleep(1)
+                    driver.switch_to.window(driver.window_handles[2])
+                    for x in range(10):
+                        actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                        actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+                    text = paste()
 
-                driver.close()
-                driver.switch_to.window(tabs[0])
-            except:
-                text = 'INVALID FILE'
+                    driver.close()
+                    driver.switch_to.window(tabs[0])
+                except:
+                    text = 'INVALID FILE'
             
             content.append(text)
             actions.send_keys(Keys.ESCAPE)
@@ -134,8 +144,6 @@ def bot(username, password, query):
             driver.find_element(By.CLASS_NAME, 'root-125').click()
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
-            #actions.send_keys(Keys.DOWN)
-            #actions.send_keys(Keys.UP)
             actions.send_keys(Keys.RETURN)
             actions.perform()
             continue
@@ -237,6 +245,7 @@ def bot(username, password, query):
         sp = ''
         spacyPhone[0] = [*set(spacyPhone[0])]
         while(len(spacyPhone[0]) != 0):
+            #Manual Filter
             if count_ints(spacyPhone[0][0]) == 10 or count_ints(spacyPhone[0][0]) == 11:
                 sp += spacyPhone[0][0] + ', '
             del spacyPhone[0][0]
