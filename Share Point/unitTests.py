@@ -32,6 +32,15 @@ def nameScrape_test():
     names = name_scrape(text)
     return names
 
+
+def emailScrape_test():
+    #open the test doc first
+    path = 'test_doc.txt'
+    path = os.path.realpath(path)
+    
+    
+
+
 def main():
     nameScrape_test()
     print("Finished tests.")
