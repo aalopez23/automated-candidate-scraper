@@ -14,7 +14,7 @@ from Paste import*
 #Login Credentials
 username = 'stran@advantechglobal.org'
 password = 'steventran2022$'
-query = 'Andrew AND Ireland AND .msg'
+query = '("navy yard" OR dc "d.c." OR dmv OR ncr OR md OR "va" OR maryland OR virginia OR 202 OR 227 OR 240 OR 301 OR 410 OR 443 OR 667 OR 276 OR 434 OR 540 OR 571 OR 703 OR 757 OR 804) AND (masters OR "master\'s" OR "MS" OR "M.S.") AND engineer AND (fleet or submarine OR submarines OR "tsub" OR "subs" OR navy OR naval OR navsea) AND (system OR systems OR test OR testing OR program OR programmatic OR technical OR engineering)'
 
 #Start runtime timer
 start = time.time()
@@ -67,6 +67,7 @@ def bot(username, password, query):
     
     content = []
     i = 0
+    repeat = False
     while(True):
         tabs = driver.window_handles
         time.sleep(3)
@@ -106,6 +107,7 @@ def bot(username, password, query):
             print(str(i + 1) + ": " + url)
             
             if 'msg' in url:
+                print('HIT MSG-----------')
                 actions.send_keys(Keys.TAB)
                 actions.send_keys(Keys.TAB)
                 actions.perform()
@@ -113,13 +115,23 @@ def bot(username, password, query):
                     actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
                     actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
                 text = paste()
-                driver.find_elements(By.CLASS_NAME, 'ms-Button-icon')[5].click()                
+                driver.find_elements(By.CLASS_NAME, 'ms-Button-icon')[20].click()     
+            elif 'html' in url:
+                print('HIT HTML-----------')
+                actions.send_keys(Keys.TAB)
+                actions.send_keys(Keys.TAB)
+                actions.perform()
+                for x in range(10):
+                    actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
+                    actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
+                text = paste()
+                driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[3]/div/div[4]/div/div/div[3]/div/div/div/div[2]/div/div/div/div/div/div/div/div/div[3]/div[6]/button/span/i').click()
             else:
                 try:
                     driver.find_elements(By.CLASS_NAME, 'ms-Button-menuIcon')[4].click()
                     driver.find_element(By.NAME, 'Open in browser').click()
                     time.sleep(1)
-                    driver.switch_to.window(driver.window_handles[2])
+                    driver.switch_to.window(driver.window_handles[1])
                     for x in range(10):
                         actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()
                         actions.key_down(Keys.CONTROL).send_keys('c').key_up(Keys.CONTROL).perform()
@@ -137,16 +149,21 @@ def bot(username, password, query):
         #Checks if the last two urls are the same
         if (len(urls) > 1) and (urls[-1] == urls[-2]):
             print('---------------REPEATING LINK ALERT!---------------') # Don't worry about this the following code will fix it and continue
-            if (len(urls) > 1) and (urls[-1] == urls[-2] == urls[-3]):
+            if repeat:
                 break
+            repeat = True
             countdown(3) # Wait for the page to load (need tweaking)
             # Reintialize the pointer to the next element
+            content.pop()
+            urls.pop()
             driver.find_element(By.CLASS_NAME, 'root-125').click()
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.DOWN)
             actions.send_keys(Keys.RETURN)
             actions.perform()
             continue
+        else:
+            repeat = False
 
         actions.send_keys(Keys.DOWN)
         print('DOWN')
@@ -206,6 +223,16 @@ def bot(username, password, query):
 
     #Print to Excel
     while len(links) != 0:
+        if 'AllItems.aspx?q=' in links[0]: #If link is not main Sharepoint page, print
+            del links[0]
+            del ftypes[0]
+            del fnames[0]
+            del spacyNameUrl[0]
+            del spacyNameContent[0]
+            del spacyEmail[0]
+            del spacyPhone[0]
+            continue
+
         s1.write(row, 0, links[0])
         s1.write(row, 1, ftypes[0])
         s1.write(row, 2, fnames[0])
@@ -225,7 +252,8 @@ def bot(username, password, query):
         snc = ''
         spacyNameContent[0] = [*set(spacyNameContent[0])]
         while(len(spacyNameContent[0]) != 0):
-            snc += spacyNameContent[0][0] + ', '
+            if 'Jacquelyn Fraser' not in spacyNameContent[0][0]:
+                snc += spacyNameContent[0][0] + ', '
             del spacyNameContent[0][0]
         snc = snc[:-2]
         s1.write(row, 4, snc)
@@ -235,7 +263,7 @@ def bot(username, password, query):
         spacyEmail[0] = [*set(spacyEmail[0])]
         while(len(spacyEmail[0]) != 0):
             #Manual Filter
-            if 'ptoro' not in spacyEmail[0][0] and 'cbrown' not in spacyEmail[0][0]:
+            if 'ptoro' not in spacyEmail[0][0] and 'cbrown' not in spacyEmail[0][0] and 'fraser' not in spacyEmail[0][0] and 'no_reply' not in spacyEmail[0][0]:
                 se += spacyEmail[0][0] + ', '
             del spacyEmail[0][0]
         se = se[:-2]
