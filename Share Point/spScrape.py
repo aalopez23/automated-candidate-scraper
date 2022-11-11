@@ -79,7 +79,8 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
              
-            
+            # where to implement
+
             if ':x:' in url:
                 text = 'EXCEL FILE'
             elif 'Intvw%20Checklist' in url:
@@ -97,6 +98,14 @@ def bot(username, password, query):
             
             content.append(text)
             driver.close()
+            # inputting content into google language processor
+            # Samuel and Joey try to figure out how to get this part to work
+            # driver.get("https://cloud.google.com/natural-language")
+            # driver.find_element(By.CLASS_NAME, "inputs reset")
+            # driver.send_keys(content)
+            # driver.find_element(By.CLASS_NAME, "inputs reset").click()
+
+            # once you figure that out try to extract the names, emails, numbers into excel
             driver.switch_to.window(tabs[0])
 
         else:
@@ -236,6 +245,12 @@ def bot(username, password, query):
         s1.write(row, 0, links[0])
         s1.write(row, 1, ftypes[0])
         s1.write(row, 2, fnames[0])
+    # Remove dupes from excel sheet
+
+
+
+
+
 
         #Print spacyNameUrl
         snu = ''
