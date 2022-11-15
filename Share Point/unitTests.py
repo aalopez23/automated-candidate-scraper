@@ -38,8 +38,6 @@ def emailScrape_test():
     path = 'test_doc.txt'
     path = os.path.realpath(path)
     
-    
-
 
 def main():
     nameScrape_test()
