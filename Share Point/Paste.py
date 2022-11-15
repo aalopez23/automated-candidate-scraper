@@ -16,11 +16,9 @@ def paste():
     
     with codecs.open('doc.txt', 'r', encoding = 'utf-8') as f:
         text = f.read()
-        #TEXT.encode('utf-8', 'ignore').decode('utf-8')
     #try:
     #    with codecs.open('doc.txt', 'r', encoding = 'utf-8') as f:
     #        text = f.read()
-    #        #TEXT.encode('utf-8', 'ignore').decode('utf-8')
     #except:
     #    text = 'ERROR'
         

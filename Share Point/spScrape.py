@@ -254,8 +254,7 @@ def bot(username, password, query):
         spacyNameUrl[0] = [*set(spacyNameUrl[0])]
         while(len(spacyNameUrl[0]) != 0):
             #Manual Filter
-            if 'Intvw Checklist' not in spacyNameUrl[0][0] and 'RESUMES' not in spacyNameUrl[0][0]:
-                snu += spacyNameUrl[0][0] + ', '
+            snu += spacyNameUrl[0][0].replace('Intvw Checklist', '').replace('RESUMES', '') + ', '
             del spacyNameUrl[0][0]
         snu = snu[:-2]
         s1.write(row, 3, snu)
