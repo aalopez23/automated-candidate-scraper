@@ -1,1 +1,343 @@
-RESUME FOR:   MARSHALL LAWRENCE 
+ 
+
+PROFESSIONAL SUMMARY	 
+
+ 
+
+An accomplished Linux, Unix System Administration with 8 years of experience in System Administration, Server builds, Installations, Upgrades, Patches, Migration, Trouble Shooting, Security, Backup, Disaster Recovery, Performance Monitoring and Fine-tuning on Red Hat Linux systems (Red Hat Satellites), Solaris, AIX, CentOS and Ubuntu platforms. Experience juggling multiple priorities and meeting tight deadline without compromising quality. Insightful, results-driven administrator with notable success directing a board range of corporate administrative initiatives while participating in planning, analysis, and implementing of solutions in analysis, full life cycle project management.  
+
+ 
+
+ 
+
+CERTIFICATION 
+
+ 
+
+Red Hat Certified Engineer (RHCE) (In progress) 
+
+CompTIA Linux+, (in progress) 
+
+CompTIA Security +, (May 2019), COMP001021501288 
+
+Dell Certified Technician, (September 2017)  
+
+HP Laptop and Printer Certified Technician, (September 2017) 
+
+ 
+
+TECHNICAL SUMMMARY 
+
+Operating Systems:  
+
+ 
+
+Linux Red Hat v6-8, Ubuntu v14-20, CentOS v6-8, Oracle Solaris v10-11, Windows Sever 2008 -2019, VMWARE ESX/ESXi 5-7, IBM AIX v5-7 
+
+Databases:  
+
+ 
+
+MS SQL Server 2008 -2020, Oracle 12c, PostgreSQL v7-9, DB2 v8-9 
+
+ 
+
+Applications, & Tools:  
+
+ 
+
+AWS – VPC, EC2, RDS 
+
+AWS network configurations 
+
+Microsoft SharePoint 
+
+MS Project 
+
+Remedy, Salesforce, Footprint  
+
+Linux Red Hat Satellite v5-6 
+
+ 
+
+ 
+
+Splunk, Wireshark  
+
+HTML, JAVA, C#, VB 
+
+Linux - Red Hat, Ubuntu, Centos 
+
+TCP/IP, DNS, NFS, NIS, SSH, DHCP, Cisco Routers / Switches and LAN 
+
+Putty SSH, FileZilla  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+PROFESSIONAL EXPERIENCE 
+
+ 
+
+UNITED STATES SECRET SERVICE                                                                                                  07/20201– 10/2021   
+
+Metaphase Consulting                                                                                                                       Washington, DC                                        
+
+Associate System Administrator, Remote (short-term)                                                                                             
+
+ 
+
+Create, maintain and decommission servers running Windows Server 2016 and 2019 in on-premises and cloud environments. 
+
+Hands-on deployment of new applications and services within a virtualized computing environment as well as providing tier II/III incident support. 
+
+Develop increasing expertise in key technologies, focusing on virtualization within cloud environments 
+
+Manage technologies in an enterprise environment with a drive for understanding customer needs and operational excellence. 
+
+Managing and maintaining DHCP, DNS and AD Services 
+
+Managing and maintaining Active Directory, DNS, DHCP servers and Event Logs 
+
+Managing and marinating ADRMS server and CA (Certificate Authority Server) 
+
+ 
+
+Defense Information System Agency                                                                                           02/2021– Present   
+
+SuprTek                                                                                                                                                  Fort Meade, MD                                        
+
+AWS/Linux System Administrator, Remote                                                                                               
+
+ 
+
+Administration of RHEL v6-8 which includes installation, testing, tuning, upgrading and loading patches, troubleshooting virtual server issues. 
+
+ Experienced in installing and configuration of Universal Forwarder, Heavy Forward, Indexers, Search Head, and Deployment server.  
+
+Experienced in implementing Splunk environment 
+
+Worked with others administrator to ensure Splunk is actively working and monitoring on the current infrastructure implementation  
+
+Experience designing and building web application environments on AWS, including services such as EC2, S3, ELB, RDS, etc. 
+
+Experience with Linux and Windows Server system administration. 
+
+Experience with installing and configuring application servers such as Nginx, and Tomcat. 
+
+Ability to create and utilize AWS Cloud Formation templates to automate creation of AWS images. 
+
+Create Alerts, Reports and Dashboard upon my supervisor requests. 
+
+Performed automated installations of Operating System using Kick start for Linux.  
+
+RPM and YUM package installations, patch and server management.  
+
+ 
+
+ 
+
+Linwood HealthCare, Inc.                                                                                                                02/2019 – 02/2021 
+
+Active Directory Administrator, Remote (short-term consultant)                                          Ellicott City, MD                                        
+
+Install, configure and maintain VMWARE ESX virtual environment 
+
+Installed, configured, and maintained multiple production and development servers 
+
+Designed and maintained both Solaris and Red Hat Linux infrastructures 
+
+Provided system and log analysis, performance tuning, and monitoring. 
+
+Maintained and support eTrust Access Control and KERBOS for all UNIX user accounts Implemented Proof of Concept for Oracle Identity Manager. 
+
+Implemented Pilot for IBM Tivoli Identity Manager. 
+
+Implemented Proof of Concept for Active Directory Lightweight Directory Service. (AD LDS) 
+
+Design and Deploy AD LDS as authentication store. 
+
+Design new solution to integrate all applications through one authentication store using AD LDS. 
+
+Design Single Sign On (SSO) through Claims-Bases authentication using Active Directory Federated 
+
+Service (ADFS) 
+
+Design and Deploy AD LDS as authentication store. 
+
+Installation and configuration of ADFS 2.0 and ADFS 1.1 as Federated Secure Token Server (STS) 
+
+Migrated users from multiple Active Domains and open LDAP to AD LDS. 
+
+Design and Implementation of FIM Service and Portal. 
+
+Integration of SAP with FIM. 
+
+Implemented Forefront Identity Manager (FIM) Sync Server Manager. 
+
+Designed solution to implement multi-authentication for web facing and cloud applications. 
+
+Implemented self-service component for account management by users. 
+
+Implemented Certificate Authority and created Certificates for SSO implementation. 
+
+Managing and maintaining DHCP, DNS and AD Services. 
+
+Managing and maintaining Active Directory, DNS, DHCP servers and Event Logs. 
+
+Managing and marinating ADRMS server. 
+
+Managing and maintaining CA (Certificate Authority Server). 
+
+ 
+
+Department of Health and Human Services                                                           08/2014 – 11/2020 
+
+Centers for Medicare & Medicaid Services 	    Windsor Mill, MD                                                           
+
+LINUX/UNIX ADMINISTRATOR, overnight                    
+
+ 
+
+Administration of RHEL v6-8 which includes installation, testing, tuning, upgrading and loading patches, troubleshooting virtual server issues. 
+
+ Experienced in installing and configuration of Universal Forwarder, Heavy Forward, Indexers, Search Head, and Deployment server.  
+
+Experienced in implementing Splunk environment 
+
+Worked with others administrator to ensure Splunk is actively working and monitoring on the current infrastructure implementation 
+
+Creating, cloning Linux Virtual Machines, templates using VMware Virtual Client 6. 
+
+Create Alerts, Reports and Dashboard upon my supervisor requests. 
+
+Involved in applying Patches, Installing patch bundles on HP-UX and Red hat Linux.  
+
+Performed automated installations of Operating System using Kick start for Linux.  
+
+RPM and YUM package installations, patch and server management.  
+
+Configured Splunk configurations files (inputs.conf, outputs.conf, transforms.conf, props.conf). 
+
+Managing systems routine backup, scheduling jobs like disabling and enabling cron jobs, enabling system login, network plunging of servers for maintenance, performance tuning, testing.  
+
+Good understanding of Splunk Architecture and the various components of Splunk (Forwarders, Indexers, Search Head, Deployment Servers), Heavy and Universal Forwarder and License Model. 
+
+Involve in creating SOP (Standard Operating Procedure).  
+
+Managing disk file systems, server performance, user’s creation and granting file access Permissions.  
+
+Providing value added customer services by attending to customer queries and issues. 
+
+ 
+
+United States Department of Agriculture                                                               06/2013 – 02/2014 
+
+Food Safety and Inspection Service                                                                                        Hanover, MD 
+
+SYSTEM ADMINISTRATOR                                                                  
+
+ 
+
+Performing Nessus Scan for vulnerabilities in web and Application servers.  
+
+Applying patches to fix the holes that are found using Nessus scan.  
+
+Upgraded and maintained servers, operating systems and patches.  
+
+Server Hardening, and system enhancement for better performances  
+
+Troubleshoot Application on Unix OS. 
+
+Built a Linux network test environment, with other team members 
+
+Edit scripts for job scheduling. 
+
+Extensive experience in Performing physical Linux servers to virtual servers  
+
+Extensive experience in UNIX performance monitoring and kernel tuning and Load balancing (F5 Load Balancer) to ensure stable performance.  
+
+Monitor and maintain Windows Server operating system and additional server components including but not limited to Exchange, Active Directory, SharePoint, SQL Server, and Skype for Business Server. 
+
+Maintained and managed a Microsoft active directory Exchange 2010 environment. 
+
+Administered a network user base with over sixteen hundred user accounts within the government sector which includes, but is not limited to, creating, modifying and closing user accounts, profiles, and related network maintenance. 
+
+Assigned and maintained user logon and access privileges. 
+
+Administered Moves/Adds/Changes in Active Directory and Microsoft Exchange 
+
+Apply patches to major subsystems and services, roles, and filesystem components within a Windows Systems environment and perform operating system and patch testing on all changes prior to installation. 
+
+Execute PowerShell or Command Shell commands. 
+
+ 
+
+General Dynamics Information Technology                                                           03/2006 – 02/2013 
+
+UMUC.                                                                                                                                                            Largo, MD 
+
+HELP DESK MANAGER  
+
+ 
+
+Works with upper management to develop plans, forecasts, and budgets for the I.T. department 
+
+Creates and manages escalation procedures and ensures service levels are maintained 
+
+Collaborates with management to develop helpdesk standards, as well as research and procurement of relevant technology 
+
+Creates and manages procedures 
+
+Prepares progressive reports for all work performed 
+
+Documents and trains on all work performed 
+
+Develops IT tech schedules, prioritizes support calls and resources for installation and support 
+
+Monitor incident management database and follow up with assigned personnel to ensure timely resolution of problems, meeting operational Service Level Agreements 
+
+Manage and maintain a centralized support documentation enabling Help Desk staff and support technicians to streamline response and resolve incidents with minimal disruption to expected service levels 
+
+Certification from a specific manufacturer such as Microsoft, or a general certification as a Help Desk manager from an organization such as the Help Desk Institute (HDI) a plus 
+
+Develop, manage and maintain reports for internal support teams and IT management to provide necessary issue status 
+
+Manage, maintain and develop incident management database and all associated configurations and connections 
+
+Manage a portfolio of projects and continuous improvement initiatives 
+
+Manage the Help Desk staff including performance evaluations, promotions, training, hiring and disciplinary responsibilities 
+
+ 
+
+ 
+
+EDUCATION 
+
+ 
+
+Master in Cloud Computing Architecture                                                           anticipated, 01/ 2021                                                   
+
+University of Maryland College, 1616 McCormick Drive, Largo, MD 20774  
+
+ 
+
+Bachelor of Science in Information Systems                                                                             03/2016 
+
+Strayer University, 6830 Laurel St NW, Washington, DC 20012 
+
+ 
+
+CLEARNACE  
+
+TS/ Sci with DoD & DHS 

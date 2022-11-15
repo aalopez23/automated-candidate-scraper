@@ -1,6 +1,7 @@
 import pyautogui #pip install pyautogui
 import os
 import time
+import codecs 
 
 def paste():
     open('doc.txt', 'w').close() # Clears the txt file
@@ -13,10 +14,14 @@ def paste():
     pyautogui.hotkey('ctrl','s')        #save the file
     pyautogui.hotkey('alt','f4')        #close the file and back to program
     
-    try:
-        with open('doc.txt', 'r') as f:
-            text = f.read()
-    except:
-        text = 'ERROR'
+    with codecs.open('doc.txt', 'r', encoding = 'utf-8') as f:
+        text = f.read()
+        #TEXT.encode('utf-8', 'ignore').decode('utf-8')
+    #try:
+    #    with codecs.open('doc.txt', 'r', encoding = 'utf-8') as f:
+    #        text = f.read()
+    #        #TEXT.encode('utf-8', 'ignore').decode('utf-8')
+    #except:
+    #    text = 'ERROR'
         
     return text

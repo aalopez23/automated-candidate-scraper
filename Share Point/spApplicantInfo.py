@@ -2,6 +2,8 @@ import spacy # pip install spacy
 import re  # built-in rgeex library
 import phonenumbers as pn # pip install phonenumbers
 
+import Paste
+
 def name_scrape(inputText):
     names = []
     nlp = spacy.load("en_core_web_lg") #python -m spacy download en_core_web_lg

@@ -7,14 +7,13 @@ from xlwt import Workbook
 from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-import random
 from spApplicantInfo import*
 from Paste import*
 
 #Login Credentials
 username = 'stran@advantechglobal.org'
 password = 'steventran2022$'
-query = '("navy yard" OR dc "d.c." OR dmv OR ncr OR md OR "va" OR maryland OR virginia OR 202 OR 227 OR 240 OR 301 OR 410 OR 443 OR 667 OR 276 OR 434 OR 540 OR 571 OR 703 OR 757 OR 804) AND (masters OR "master\'s" OR "MS" OR "M.S.") AND engineer AND (fleet or submarine OR submarines OR "tsub" OR "subs" OR navy OR naval OR navsea) AND (system OR systems OR test OR testing OR program OR programmatic OR technical OR engineering)'
+query = '(system OR network OR systems) AND (administrator OR admin OR validate OR validation OR validator) AND (test OR testing OR tested OR tester OR troubleshooting OR troubleshoot OR troubleshot) AND (ACAS OR SCAP OR LAN OR LANs) AND (STIGs OR STIG OR a&a OR authentication OR authorization OR access OR assurance OR compliance OR implementaqtion) AND (putty OR winscp OR securecrt) AND (cyber OR security) AND (windows OR unix)'
 
 #Start runtime timer
 start = time.time()
@@ -79,7 +78,6 @@ def bot(username, password, query):
             urls.append(url)
             print(str(i + 1) + ": " + url)
              
-            
             if ':x:' in url:
                 text = 'EXCEL FILE'
             elif 'Intvw%20Checklist' in url:
