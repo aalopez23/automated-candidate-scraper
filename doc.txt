@@ -1,343 +1,381 @@
- 
-
-PROFESSIONAL SUMMARY	 
+LABOR CATEGORY: Cloud Security Infrastructure Administrator 
 
  
 
-An accomplished Linux, Unix System Administration with 8 years of experience in System Administration, Server builds, Installations, Upgrades, Patches, Migration, Trouble Shooting, Security, Backup, Disaster Recovery, Performance Monitoring and Fine-tuning on Red Hat Linux systems (Red Hat Satellites), Solaris, AIX, CentOS and Ubuntu platforms. Experience juggling multiple priorities and meeting tight deadline without compromising quality. Insightful, results-driven administrator with notable success directing a board range of corporate administrative initiatives while participating in planning, analysis, and implementing of solutions in analysis, full life cycle project management.  
+CURRENT EMPLOYER: Vexterra Group 
 
  
 
- 
-
-CERTIFICATION 
+CLEARANCE: TS/SCI CI Poly 
 
  
 
-Red Hat Certified Engineer (RHCE) (In progress) 
-
-CompTIA Linux+, (in progress) 
-
-CompTIA Security +, (May 2019), COMP001021501288 
-
-Dell Certified Technician, (September 2017)  
-
-HP Laptop and Printer Certified Technician, (September 2017) 
+TOTAL YEARS OF EXPERIENCE: Over 30 Years 
 
  
 
-TECHNICAL SUMMMARY 
+SPECIALIZED TRAINING: 
 
-Operating Systems:  
+Certified Information Systems Security Professional (CISSP)							       Currently 
 
- 
+AWS Certified Solution Architect Associate (Udemy Training)						       Currently 
 
-Linux Red Hat v6-8, Ubuntu v14-20, CentOS v6-8, Oracle Solaris v10-11, Windows Sever 2008 -2019, VMWARE ESX/ESXi 5-7, IBM AIX v5-7 
+AWS Security Specialist (Udemy Training)										2020 
 
-Databases:  
+Azure Security Technologist (Udemy Training)									2020 
 
- 
+AWS Cloud Practitioner (Udemy Training)										2020 
 
-MS SQL Server 2008 -2020, Oracle 12c, PostgreSQL v7-9, DB2 v8-9 
+CompTIA Security+ SY0-501 Certification									    12/28/2018 
 
- 
+Fortinet Network Security Expert NSE 1 Security Associate Certified						    12/10/2018 
 
-Applications, & Tools:  
+Splunk 7.x Fundamentals Part 1 (Splunk eLearning Certificate course work only)				    10/26/2018 
 
- 
+NESSUS Fundamentals (Cybrary Micro Certification)							      8/23/2018 
 
-AWS – VPC, EC2, RDS 
+Nextiva UCaaS - Certified Installer										        8/9/2018 
 
-AWS network configurations 
+Fortinet Training – Fortigate, FortiSwitch, FortiAP, FortiClient, FortiSandbox, FortiMail, & FortiSIEM 		   2017 - 2018 
 
-Microsoft SharePoint 
+Cloud Computing Fundamentals: Migrating to the Cloud 								2016 
 
-MS Project 
+Cisco Certified Network Associate (CCNA) Routing and Switching (course work only) 					2015 
 
-Remedy, Salesforce, Footprint  
+Cisco Certified Entry Networking Technician (CCENT) (course work only) 						2015 
 
-Linux Red Hat Satellite v5-6 
+CompTIA Hiring a Hacker: Auditing and Penetration Testing Tips, Tricks and Traps 					2015 
 
- 
+Cybersecurity and its Ten Domains, Kennesaw State University Online 							2015 
 
- 
+Grow to Greatness: Smart Growth for Private Business Part I & II UVA Darden School of Business Online 			2013 
 
-Splunk, Wireshark  
+APC Cooling Strategies & Power Problems	 	 								2012 
 
-HTML, JAVA, C#, VB 
+CompTIA Network+ (course work only) 										2012 
 
-Linux - Red Hat, Ubuntu, Centos 
+A10 Load Balancer & Security											2011 
 
-TCP/IP, DNS, NFS, NIS, SSH, DHCP, Cisco Routers / Switches and LAN 
+Cisco CCNA 802.11 Wireless LAN Fundamentals  									2011 
 
-Putty SSH, FileZilla  
+HIPAA Training Certification  										   2010 - 2017 
 
- 
+Fortigate Firewall Appliance Fundamentals	 	 								2010 
 
- 
+Veritas/Symantec Backup Exec	  										2005 
 
- 
+MCSE Windows Server 2003 											2003 
 
- 
+MQ Series/Web Sphere (server/client communication package)  							2003 
 
- 
+AutoCAD certified  												2003 
 
- 
+Quality Management System	  										2003 
 
-PROFESSIONAL EXPERIENCE 
+Defect Causal Analysis	  											2003 
 
- 
+Intermec Intellitag RF ID Certified Applications Engineer  								2002 
 
-UNITED STATES SECRET SERVICE                                                                                                  07/20201– 10/2021   
+Motorola, IDEN Communication Systems  										2000 
 
-Metaphase Consulting                                                                                                                       Washington, DC                                        
+Managing Conflict in a Team Based Environment  									1999 
 
-Associate System Administrator, Remote (short-term)                                                                                             
+Empowered Communications  											1999 
 
- 
+RF Plant and Distribution Design  											1998 
 
-Create, maintain and decommission servers running Windows Server 2016 and 2019 in on-premises and cloud environments. 
+DirecTV, Digital Broadcast Satellite Theory and Operation  								1998 
 
-Hands-on deployment of new applications and services within a virtualized computing environment as well as providing tier II/III incident support. 
+HP, Testing Digital Video  											1997 
 
-Develop increasing expertise in key technologies, focusing on virtualization within cloud environments 
+HP, Digital Video Test Symposium  										1996 
 
-Manage technologies in an enterprise environment with a drive for understanding customer needs and operational excellence. 
+Tektronics, Video Test & Measurements Practices  									1996 
 
-Managing and maintaining DHCP, DNS and AD Services 
+MIL-STD-2000 Soldering Technology Category E  								 1993 & 1994 
 
-Managing and maintaining Active Directory, DNS, DHCP servers and Event Logs 
+Schlumberger 645 Programming, Automatic Test Equipment (ATE)  							1993 
 
-Managing and marinating ADRMS server and CA (Certificate Authority Server) 
-
- 
-
-Defense Information System Agency                                                                                           02/2021– Present   
-
-SuprTek                                                                                                                                                  Fort Meade, MD                                        
-
-AWS/Linux System Administrator, Remote                                                                                               
+AAS, Major: Electrical Engineering, DMACC									1991 
 
  
 
-Administration of RHEL v6-8 which includes installation, testing, tuning, upgrading and loading patches, troubleshooting virtual server issues. 
-
- Experienced in installing and configuration of Universal Forwarder, Heavy Forward, Indexers, Search Head, and Deployment server.  
-
-Experienced in implementing Splunk environment 
-
-Worked with others administrator to ensure Splunk is actively working and monitoring on the current infrastructure implementation  
-
-Experience designing and building web application environments on AWS, including services such as EC2, S3, ELB, RDS, etc. 
-
-Experience with Linux and Windows Server system administration. 
-
-Experience with installing and configuring application servers such as Nginx, and Tomcat. 
-
-Ability to create and utilize AWS Cloud Formation templates to automate creation of AWS images. 
-
-Create Alerts, Reports and Dashboard upon my supervisor requests. 
-
-Performed automated installations of Operating System using Kick start for Linux.  
-
-RPM and YUM package installations, patch and server management.  
+SPECIALIZED EXPERIENCE 
 
  
 
- 
+Strong organizational and project management skills. Ability to work independently with minimal guidance as well as work effectively as part of a team. 
 
-Linwood HealthCare, Inc.                                                                                                                02/2019 – 02/2021 
+Strong management with the ability to take charge, evaluate information, make knowledgeable decisions and empower the team to achieve goals. 
 
-Active Directory Administrator, Remote (short-term consultant)                                          Ellicott City, MD                                        
+Effective at seeking out and utilizing interpersonal relationships across organizations and at all levels to create needed win-win solutions for the customer. 
 
-Install, configure and maintain VMWARE ESX virtual environment 
+Excellent leadership, oral, written and presentation skills. 
 
-Installed, configured, and maintained multiple production and development servers 
+Ability to effectively deal with a wide variety of audiences, including customers, C-levels, senior managers and technical personnel. 
 
-Designed and maintained both Solaris and Red Hat Linux infrastructures 
+Greatest technical strengths are the abilities to rapidly learn new technologies to conquer the task at hand, think on my feet, and devise creative solutions to overcome challenges.  
 
-Provided system and log analysis, performance tuning, and monitoring. 
+Strong understanding of systems O&M life-cycle support, maintenance, administration and management. 
 
-Maintained and support eTrust Access Control and KERBOS for all UNIX user accounts Implemented Proof of Concept for Oracle Identity Manager. 
+Thorough experience with analyzing, designing, integrating and testing complex systems. 
 
-Implemented Pilot for IBM Tivoli Identity Manager. 
+Strong understanding of HIPAA HITECH regulations and IT security solutions (SIEM, Intrusion Protection Systems, Security Suites, Risk Assessments, Risk Management and Mitigation, Vulnerability Scanning) 
 
-Implemented Proof of Concept for Active Directory Lightweight Directory Service. (AD LDS) 
+Expert analytical, logic and troubleshooting abilities. 
 
-Design and Deploy AD LDS as authentication store. 
+Comprehensive understanding of detailed electronic circuits and schematics. 
 
-Design new solution to integrate all applications through one authentication store using AD LDS. 
+Thorough experience with many operating systems/programs: DOS, Mac, OS/2, Microsoft Windows 3.1/95/98/ME/NT 3.51/ NT 4.0/2000 (NT 5.0)/XP/Vista/7/8.1/10, 2003/2008/2008R2/2012/2012R2/2016/2019, MS Hyper V, VMWare, VirtualBox, MS Terminal (RDS) Server, MS Exchange Server, MS SQL Server, MS SharePoint Server, MS Communication (Lync) Server, Citrix, Unix (SUN), Linux CentOS, Linux Ubuntu, Kali, IBM OS2, OS9, Cisco IOS, Fortigate IOS, GitLab, Atlassian Jira, Symantec Backup Exec, Lotus, MS Office, Visual Basic, MS Visual C/C++, HTML, JAVA, Visio, AutoCAD, HP Openview, Solarwinds, Nable Ncentral, Stealthwatch, Splunk, Nessus Vulnerability Scanner, Adobe, Crystal Reports, Remedy, WebSphere MQ Series, Symantec Antivirus, Norton Ghost, Recover Soft Data Rescue, Media Tools Pro, Trend Micro Antivirus, QuoteWerks, Quickbooks, Autotask, ConnectWise, SolarWinds N-able N-Centeral NOC, Wireshark, PowerShell, etc. (lots of different windows utilizes). 
 
-Design Single Sign On (SSO) through Claims-Bases authentication using Active Directory Federated 
-
-Service (ADFS) 
-
-Design and Deploy AD LDS as authentication store. 
-
-Installation and configuration of ADFS 2.0 and ADFS 1.1 as Federated Secure Token Server (STS) 
-
-Migrated users from multiple Active Domains and open LDAP to AD LDS. 
-
-Design and Implementation of FIM Service and Portal. 
-
-Integration of SAP with FIM. 
-
-Implemented Forefront Identity Manager (FIM) Sync Server Manager. 
-
-Designed solution to implement multi-authentication for web facing and cloud applications. 
-
-Implemented self-service component for account management by users. 
-
-Implemented Certificate Authority and created Certificates for SSO implementation. 
-
-Managing and maintaining DHCP, DNS and AD Services. 
-
-Managing and maintaining Active Directory, DNS, DHCP servers and Event Logs. 
-
-Managing and marinating ADRMS server. 
-
-Managing and maintaining CA (Certificate Authority Server). 
+Thorough experience with technologies: Microsoft Azure Cloud Services, Amazon Web Services (AWS), Office 365, Microsoft, Cisco, Citrix, NetApp, Docker, Kubernetes, TCP/IP, LAN, WAN, MAN, Active Director (AD), Group Policy Object (GPO), DHCP, DNS, WINS, File & Print Server, Firewalls, Routers, Switches, Hubs, Data Recovery, RF, Wi-Fi 802.11x, Satellite Communications, Microwave communications, V-SAT, QAM64, TDMA, CDMA, GSM, Digital &Analog RF, Amplifiers, Attenuators, Multiplexers, Satellite uplink and downlink, IDU, ODU, Transponders, E1, T1, ADSL, DSL, Broadband, Fiber Optics, Transceivers, NTSC Video, Audio, DTV, HDTV, Mpeg, TCP, UDP, Active Directory, DNS, WINs, DHCP, ARP, SNMP, NAT, IPSec, PSK, AES, IEEE, RS232, RS422, ANSI, ISO, etc. 
 
  
 
-Department of Health and Human Services                                                           08/2014 – 11/2020 
-
-Centers for Medicare & Medicaid Services 	    Windsor Mill, MD                                                           
-
-LINUX/UNIX ADMINISTRATOR, overnight                    
+WORK EXPERIENCE 
 
  
 
-Administration of RHEL v6-8 which includes installation, testing, tuning, upgrading and loading patches, troubleshooting virtual server issues. 
+VEXTERRA GROUP	 	January 2020 – Present 
 
- Experienced in installing and configuration of Universal Forwarder, Heavy Forward, Indexers, Search Head, and Deployment server.  
+Cloud Security Infrastructure Administrator  
 
-Experienced in implementing Splunk environment 
+Contractor to the United States (US) Department of Defense (DoD) Defense Intelligence Agency’s (DIA) National Media Exploitation Center (NMEC) Research and Development (R&D) Lab known as Project Kitty Hawk (pKH) in Reston, VA as a Cloud Security System Administrator for lab, colocation, AWS and Azure infrastructures. Work with software developers and system administrators to: 
 
-Worked with others administrator to ensure Splunk is actively working and monitoring on the current infrastructure implementation 
+Develop monthly vulnerability scan schedule for pKH infrastructure 
 
-Creating, cloning Linux Virtual Machines, templates using VMware Virtual Client 6. 
+Conduct infrastructure vulnerability scans to determine and remediate vulnerabilities 
 
-Create Alerts, Reports and Dashboard upon my supervisor requests. 
+Monitor and remediate security events 
 
-Involved in applying Patches, Installing patch bundles on HP-UX and Red hat Linux.  
+Conduct penetration testing 
 
-Performed automated installations of Operating System using Kick start for Linux.  
+Review, advise and implement NIST security best practices of on-prem and cloud enclaves 
 
-RPM and YUM package installations, patch and server management.  
+Review, advise and implement security best practices for Office 365, Azure, and AWS 
 
-Configured Splunk configurations files (inputs.conf, outputs.conf, transforms.conf, props.conf). 
+Review and update Incident Management and Response Plan 
 
-Managing systems routine backup, scheduling jobs like disabling and enabling cron jobs, enabling system login, network plunging of servers for maintenance, performance tuning, testing.  
+Develop and implement monthly software updates schedule for pKH infrastructure 
 
-Good understanding of Splunk Architecture and the various components of Splunk (Forwarders, Indexers, Search Head, Deployment Servers), Heavy and Universal Forwarder and License Model. 
+Develop and deploy AWS automation processes for System Manager (SSM) for patch management 
 
-Involve in creating SOP (Standard Operating Procedure).  
+Utilize, support, and maintain GitLab Enterprise Edition application 
 
-Managing disk file systems, server performance, user’s creation and granting file access Permissions.  
+Build, configure, and maintain physical and virtual machines (VMs) for Windows 10, 2016, 2019, Linux, CentOS 7, Ubuntu, Kali and Security Onion 
 
-Providing value added customer services by attending to customer queries and issues. 
+Configure, support, and maintain projects, development platforms and infrastructure in AWS and Azure 
 
- 
+Utilize and maintain Jira Atlassian software 
 
-United States Department of Agriculture                                                               06/2013 – 02/2014 
+Develop numerous standard operating procedures (SOPs) 
 
-Food Safety and Inspection Service                                                                                        Hanover, MD 
+Support all system administration functions for pKH infrastructure and end users 
 
-SYSTEM ADMINISTRATOR                                                                  
-
- 
-
-Performing Nessus Scan for vulnerabilities in web and Application servers.  
-
-Applying patches to fix the holes that are found using Nessus scan.  
-
-Upgraded and maintained servers, operating systems and patches.  
-
-Server Hardening, and system enhancement for better performances  
-
-Troubleshoot Application on Unix OS. 
-
-Built a Linux network test environment, with other team members 
-
-Edit scripts for job scheduling. 
-
-Extensive experience in Performing physical Linux servers to virtual servers  
-
-Extensive experience in UNIX performance monitoring and kernel tuning and Load balancing (F5 Load Balancer) to ensure stable performance.  
-
-Monitor and maintain Windows Server operating system and additional server components including but not limited to Exchange, Active Directory, SharePoint, SQL Server, and Skype for Business Server. 
-
-Maintained and managed a Microsoft active directory Exchange 2010 environment. 
-
-Administered a network user base with over sixteen hundred user accounts within the government sector which includes, but is not limited to, creating, modifying and closing user accounts, profiles, and related network maintenance. 
-
-Assigned and maintained user logon and access privileges. 
-
-Administered Moves/Adds/Changes in Active Directory and Microsoft Exchange 
-
-Apply patches to major subsystems and services, roles, and filesystem components within a Windows Systems environment and perform operating system and patch testing on all changes prior to installation. 
-
-Execute PowerShell or Command Shell commands. 
+Assist with contract proposals to advise on NIST and infrastructure best practices 
 
  
 
-General Dynamics Information Technology                                                           03/2006 – 02/2013 
+BOOZ, ALLEN, HAMILTON, INC 	November 2018 – January 2020 
 
-UMUC.                                                                                                                                                            Largo, MD 
+Cybersecurity / Network Engineer, Subject Matter Expert (SME)  
 
-HELP DESK MANAGER  
+Consultant to the US Department of Veterans Affairs (VA) Office of Electronic Health Record Modernization (OEHRM) Technology Integration Office (TIO) Infrastructure Team Network Engineer, SME 
 
- 
+Work in extremely fast paced, highly productive, high-pressure environment providing consulting services for the modernization of the VA’s infrastructure for the deployment of Cerner’s Millennium electronic health record (EHR) Solution. 
 
-Works with upper management to develop plans, forecasts, and budgets for the I.T. department 
+Develop cybersecurity tabletop security exercises and scenarios. 
 
-Creates and manages escalation procedures and ensures service levels are maintained 
+Review authority to connect (ATC) and authority to operate (ATO) 
 
-Collaborates with management to develop helpdesk standards, as well as research and procurement of relevant technology 
+Review deliverables to provide feedback accordingly. 
 
-Creates and manages procedures 
+Review vendor recommendations and advise government client. 
 
-Prepares progressive reports for all work performed 
+Create infrastructure requirements, cybersecurity requirements, deployment plans, implementation plans, playbooks, guides, assessments, visual data placemats in PowerPoint and status reports 
 
-Documents and trains on all work performed 
+Review VA Medical Center (VAMC) infrastructure assessments and consult with Government Client to recommend course of action for upgrades. 
 
-Develops IT tech schedules, prioritizes support calls and resources for installation and support 
+Assist in the development of statements of work (SOW) and procurement packages for infrastructure upgrade contracts 
 
-Monitor incident management database and follow up with assigned personnel to ensure timely resolution of problems, meeting operational Service Level Agreements 
+Develop solutions to address infrastructure problems to meet go live dates. 
 
-Manage and maintain a centralized support documentation enabling Help Desk staff and support technicians to streamline response and resolve incidents with minimal disruption to expected service levels 
-
-Certification from a specific manufacturer such as Microsoft, or a general certification as a Help Desk manager from an organization such as the Help Desk Institute (HDI) a plus 
-
-Develop, manage and maintain reports for internal support teams and IT management to provide necessary issue status 
-
-Manage, maintain and develop incident management database and all associated configurations and connections 
-
-Manage a portfolio of projects and continuous improvement initiatives 
-
-Manage the Help Desk staff including performance evaluations, promotions, training, hiring and disciplinary responsibilities 
+Conduct risk analyses and develop risk mitigation plans to move projects back to “green” status to put them back on schedule. 
 
  
 
+TEKNIK IT MANAGEMENT & DATA SECURITY, INC 	October 2003 – June 2018 
+
+Founder, CTO, Senior Systems/Network Engineer & Systems Integrator 
+
+Employed by Teknik IT to manage technical staff, perform systems engineering and architect, cyber security solutions, systems integration, technology implementation and support of complex technology onsite and cloud solutions for customers throughout the Washington, DC metro area including government and private sector.  
+
+Serve as manager and senior systems/network engineer for all support operations of multiple customers responsible for evaluating technology, managing budgets, planning with management, change management, configuration documentation, technology analysis, full systems and network architect, lab testing, technology implementation, help desk operations and quality control. 
+
+Design, integrate, manage, install, configure, support and troubleshoot system failures for technology systems, on-premise or cloud solutions with a focus on Healthcare and HIPAA security solutions including network cabling infrastructure (CAT5, CAT6, Coax, Fiber), hubs, switches, routers, firewall adaptive security appliances (Cisco ASA, Fortigate & Sonicwall), modems, wireless access points (802.11 b/g/a/n/ac), servers, workstations, mobile devices, software and hardware unified threat management (UTM) security solutions, backup & disaster recovery (BDR), COTS software, line of business applications, network management systems (NMS), remote access servers (RAS), telephone PBX, VOIP, PRI, SIP trunks, T1, Broadband, VPN, TCP/IP, LAN/WAN/MAN, microwave point-to-point, Web Services, Domain Names, Virtual Private Clouds (VPC), Content Management Systems (CMS), etc. 
+
+Manage customer accounts, tickets, configurations, documentation, in professional services automation (PSA) system. 
+
+Collaborate with team to provide technical input to prepare RFI, RFP, RFQ and customer proposals. 
+
+Remote monitor & manage (RMM) customer systems utilizing SolarWinds N-able N-Central network operation center (NOC). 
+
+Work with testing tools and utilities such as Stealthwatch, N-Central, Splunk, Solarwinds SIEM, Nessus Vulnerability Scanner, Wireshark, PowerShell, Windows Command Line, Putty, telnet, SSH, FileZilla, FTP, AirSleuth Pro RF Spectrum Analyzer, Cisco Spectrum Expert Wi-Fi, inSSIDer, HijackThis, Pen testing, Vulnerability Scanning, Microsoft Baseline Security Analyzer (MBSA), Port Scanners (TCPView, Angry IP Scanner, 7th Sphere Port Scan, etc.)  
+
+Work with and proficient in technology: Microsoft Azure Cloud Services, Dos, Windows 3.1, NT4.0, 95, 98, 2000, XP, Vista, 7, 8.1 & 10; Windows server 2000, 2003, 2008, 2008R2, 2012, 2012R2, 2016, MS SQL, MS RDS, MS Exchange, MS SharePoint, MS Lync and Linux.  
+
+Other technology platforms VMware, MS Hyper-V, Citrix, NetApp, Cisco IOS, Fortigate, Trend Micro, Security Solutions/Suites (SIEM, Vulnerability Scanner, IDS, UTM),  IBM OS2, OS9, Unix, Linux, MAC, RF, Wi-Fi 802.11x, Satellite Communications and Microwave communications; Protocols and standards OSI Model, TCP/IP Stacks, TCP, UDP, Active Directory, DNS, WINs, DHCP, ARP, SNMP, NAT, IPSec, PSK, AES, IEEE, RS232, RS422, ANSI, FTP, TFTP. SMTP, SSH, Telnet, HTTP, etc. 
+
  
 
-EDUCATION 
+L3 (INTERNATIONAL MICROWAVE CORP. [IMC]) 	October 2001 – October 2003 
+
+Systems Engineer  
+
+Employed by IMC, a division of L3 Communications, on a two year contract to CSC on a Department of Homeland Security (DHS) contract in the development and maintenance of DOJ INS U.S. Port of Entry’s Alternative Inspections systems for entry into the United States from other countries. 
+
+Served on the transition team for project handover from previous contract holder. 
+
+Designed and directed setup of testing labs to test SCRs, system failures and build-outs for deployments. 
+
+Tested software applications and created reports on bugs in the code. 
+
+Managed and Implemented test facility build-out, system setup, configuration of system and hardware/software testing. 
+
+Deployed, configured and maintained US port of entry’s automated inspection systems hardware and software, including debugging system failures with PC based computer hardware, Windows operating systems, Software applications, Analog RF Systems, Laser detection Systems and data communication (i.e. COM, LPT, TCP/IP). 
+
+Wrote System Maintenance Manuals to expedite repair of system failures in the field. 
+
+Worked with a team of developers to design, prototype and test a new architecture for the airport port of entry system utilizing WebSphere MQ server and clients for database messaging between computer systems and platforms. 
+
+Manage customer tickets utilizing Remedy ticketing system. 
 
  
 
-Master in Cloud Computing Architecture                                                           anticipated, 01/ 2021                                                   
+HUGHES NETWORK SYSTEMS (HNS) 	January 2001 – August 2001 
 
-University of Maryland College, 1616 McCormick Drive, Largo, MD 20774  
+Senior Lead Hardware Test Engineer 	 
+
+Employed by Vista RMS on a six-month temporary contract to HNS developing Mobile Satellite Telecommunications 
+
+Led team of engineers developing and integrating the Thuraya Mobile SAT System, a dual-mode satellite and GSM cellular communication system, responsible for managing and allocating resources of the day-to-day activities of the Engineering Lab (System Integration group, User Terminal team) to support direct completion of the project. 
+
+Supervised and participated in system testing to ensure system met contract requirements and debugged system failures 
+
+Performed detailed analysis of system tests and advised upper management 
+
+Coordinated debugging system failures for problems found in the lab/field and future test planning 
+
+Served on a cross-departmental debugging team that included all levels of the division hierarchy 
+
+Worked with extremely complicated system to support voice, data and fax service (technologies in GSM, T1, E1, TDMA, Quam Modulation and Satellite Simulators) 
+
+Used a variety of test equipment (Spectrum Analyzers, Vector Analyzer, RF Signal Generators, Demodulators, Network Analyzers and Protocol Analyzers) 
 
  
 
-Bachelor of Science in Information Systems                                                                             03/2016 
+VERIZON 		December 1995 – December 2000 
 
-Strayer University, 6830 Laurel St NW, Washington, DC 20012 
+Manager of Engineering  
+
+Worked as a Systems and Electrical Engineer in the research & development (R&D) of digital and interactive television in the System Integration Group for TeleTV (owned by Bell Atlantic Video Service). Today, one of the products we developed is known as FIOS. Also served as a Manager and Construction & Engineering Project Manager. 
+
+Managed and led day-to-day activities of Verizon’s Test & Integration Engineering Labs 
+
+Planned, built test beds, and wrote and implemented test plans to test RF and Fiber Optical systems 
+
+Tested and reported on new technologies being considered by Verizon (i.e. high speed internet, video delivery system) 
+
+Analyzed failed products to determine the cause and worked with vendors to correct problems 
+
+Project managed Verizon’s Multi-Dwelling Unit projects (surveyed properties to determine feasibility, created pre-design drawings, reviewed and critiqued designs, wrote statement of work per right of entry contracts, ordered materials, coordinated construction, created as-build drawings, quality assurance of projects, tracked project budgets, and hand-off of projects to Installation and Maintenance Team (I&M)) 
+
+Observed Installation & Maintenance installations to ensure quality and provide feedback 
+
+Provided technical support, sales engineering technical analysis and project implementation management to other Verizon entities including Advanced Technology, Marketing, Sales and I&M 
+
+Worked on the Set Top Unit team in the development of Digital Video Delivery Systems (i.e. Video on Demand (VOD)- ADSL, Near Video on Demand (NVOD) – Microwave Quam 64, Hybrid Fiber Coax, Full Service Network now known as FIOS) 
+
+Planned and built end to end system and testing lab for developing and testing DTV (Digital Television) systems through the development cycle of the project 
+
+Wrote and implemented in-house and field test plans for DTV Systems 
+
+Utilized NTSC Baseband Audio/Video theory and associated test/measurement systems 
+
+Debugged DTV STU (Set Top Unit) Hardware & Software problems 
+
+Provided technical support and analysis of DTV system failures 
+
+Applied MPEG2 encoding process theory and associated transport and testing 
+
+Designed and implemented DBS (Direct Broadcast Service) distribution systems 
+
+Worked with DiviCom System Controller, Spoolers, Encoders, Remuxs, Quam 64 Modulators, and C-band Satellite Receivers 
+
+Wrote test plans, implemented tests and evaluated passive and active RF (Radio Frequency) CATV, L-band and Microwave devices 
+
+Used a variety of test equipment (Audio/Video Analyzers, Oscilloscopes, Transcoders, Spectrum Analyzers, Vector Analyzer, Audio/Video generators, RF Signal Generators, Demodulators, DMMs, Communication Analyzers and MPEG analyzers) 
 
  
 
-CLEARNACE  
+NEC 	October 1995 - December 1995 
 
-TS/ Sci with DoD & DHS 
+Electrical Engineer  
+
+Worked for Butler Service Group on a three-month temporary contract to NEC working with VSAT satellite equipment 
+
+Troubleshot and tested digital and analog circuits on VSAT IDU’s and ODU’s to component level 
+
+Developed a troubleshooting guide to speed up the repair and testing process 
+
+Performed engineering changes and design modifications to printed circuit board 
+
+ 
+
+IBM 	March 1995 - September 1995 
+
+Mission Specialist  
+
+Worked for MindShare on a six-month temporary contract to IBM providing technical sales engineering for the marketing of OS/2 Warp 
+
+Performed systems integration of OS/2 with computer systems and programs 
+
+Troubleshot and repaired software problems for IBM’s OS/2 corporate customers 
+
+Preformed technical presentations to C-level executives and decision makes 
+
+Instructed technical software training classes on OS/2 WARP 
+
+ 
+
+MANTECH FIELD ENGINEERING 	July 1993 - March 1995 
+
+Lead Sr. Computer System Specialist  
+
+DOD Contract; served as leader of a team of five people to develop programs in test basic code on a UNIX platform for automatic test equipment working closely with digital and analog Electrical theory. 
+
+Wrote software code in Test Basic for Unix platform using vi editor 
+
+Performed system analysis, desk side operation and technical assistance 
+
+Developed test jig boards and cables to help in the troubleshooting and the repair of computer systems 
+
+Troubleshot and repaired various types of computer, electronic equipment and communication systems (worked with RF) 
+
+Performed fault isolation, repair and testing of complex analog/digital problems to component level with and without schematics 
+
+Designed, bread boarded and manufactured electronic printed circuit boards and cables to MIL-STD 
+
+Determined quality assurance criteria for DOD 
+
+ 
+
+ELECTRICAL ENGINEERING CO, CAR SOUND & PDI 	1990 - 1993 
+
+Electronic/Maintenance Technician  
+
+Repaired and performed maintenance on Motorola RF transmission systems (trunking, cellular, two-way, repeaters, etc.) 
+
+Repaired receivers, tape decks and amplifiers to component level and installed custom fabricated Mobile Electronic Equipment 
+
+Maintained and repaired electronic forklifts and various electronic equipment 
