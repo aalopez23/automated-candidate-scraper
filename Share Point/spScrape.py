@@ -7,8 +7,18 @@ from xlwt import Workbook
 from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
+import sys
+import os
 from spApplicantInfo import*
 from Paste import*
+# Add parent directory to path to import candidateRanker
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+try:
+    from candidateRanker import rank_sharepoint_csv
+    RANKING_AVAILABLE = True
+except ImportError:
+    RANKING_AVAILABLE = False
+    print("Warning: candidateRanker module not found. Ranking will be skipped.")
 
 #Login Credentials
 # Configuration: Use config.py file or set environment variables
@@ -334,7 +344,21 @@ def bot(username, password, query):
         del spacyPhone[0]
         row += 1
 
-    wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
+    filename = 'spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv'
+    wb.save(filename)
+    
+    # Rank candidates automatically
+    if RANKING_AVAILABLE:
+        try:
+            print("\n" + "="*50)
+            print("Ranking candidates...")
+            print("="*50)
+            ranked_file = rank_sharepoint_csv(filename)
+            print(f"Ranked candidates saved to: {ranked_file}")
+            print(f"Top candidates are ranked by total score (0-100)")
+            print("="*50 + "\n")
+        except Exception as e:
+            print(f"Warning: Could not rank candidates: {e}")
 
 if __name__ == "__main__":
     bot(username, password, query)

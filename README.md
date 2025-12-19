@@ -12,6 +12,7 @@ This project was developed during a Fall 2022 internship to automate the collect
 - **Reduced time-to-hire by 30%** through streamlined candidate evaluation
 - Automated data collection from **Clearance Jobs** and **SharePoint** platforms
 - Implemented NLP-based algorithms for candidate categorization and evaluation
+- **Automated candidate ranking system** scores and ranks candidates based on multiple criteria
 
 ## 🚀 Features
 
@@ -42,7 +43,22 @@ This project was developed during a Fall 2022 internship to automate the collect
 - Filters out internal contacts and invalid data
 - Categorizes and structures extracted information
 
-### 4. Data Processing & Cleaning
+### 4. Automated Candidate Ranking & Scoring
+
+- **Intelligent Scoring System**: Automatically scores candidates based on multiple criteria:
+  - Years of experience
+  - Security clearance level
+  - Education level
+  - Profile recency (how recently updated)
+  - Relocation willingness
+  - Salary expectations vs budget
+  - Contact information completeness
+- **Customizable Weights**: Adjust scoring priorities to match your hiring needs
+- **Automatic Ranking**: Candidates are automatically ranked by total score (0-100)
+- **Score Breakdown**: See individual scores for each criterion
+- **Streamlined Hiring**: Focus on top-ranked candidates first
+
+### 5. Data Processing & Cleaning
 
 - Jupyter notebook for data cleaning and analysis
 - Removes duplicates and invalid entries
@@ -64,6 +80,8 @@ This project was developed during a Fall 2022 internship to automate the collect
 │   ├── Paste.py            # Clipboard handling utility
 │   └── unitTests.py        # Unit tests
 ├── cleaningTable.ipynb     # Data cleaning notebook
+├── candidateRanker.py     # Candidate scoring and ranking module
+├── ranking_config.example.py  # Ranking configuration template
 └── excelfiles/            # Output directory (gitignored)
 ```
 
@@ -76,6 +94,7 @@ This project was developed during a Fall 2022 internship to automate the collect
 - **xlwt** - Excel file generation
 - **regex** - Pattern matching for emails and phone numbers
 - **phonenumbers** - Phone number validation
+- **Custom Ranking Algorithm** - Automated candidate scoring and ranking
 
 ## 📦 Installation
 
@@ -122,6 +141,35 @@ SEARCH_QUERY = 'your search query here'
 ```
 
 ## 💻 Usage
+
+### Candidate Ranking
+
+The ranking system runs automatically after scraping. To customize ranking:
+
+1. Copy the ranking configuration template:
+
+```bash
+cp ranking_config.example.py ranking_config.py
+```
+
+2. Edit `ranking_config.py` to adjust:
+
+   - Scoring weights (prioritize what matters most)
+   - Clearance level scores
+   - Education level scores
+   - Salary budget (if applicable)
+
+3. The scrapers will automatically use your custom configuration when ranking candidates.
+
+**Example:** To prioritize experience over clearance:
+
+```python
+RANKING_WEIGHTS = {
+    'years_experience': 0.40,  # Increased from 0.25
+    'clearance_level': 0.15,   # Decreased from 0.20
+    # ... other weights
+}
+```
 
 ### Clearance Jobs Scraper
 
@@ -185,6 +233,17 @@ Both scrapers generate CSV files with the following structure:
 - **Browser**: Chrome browser is required (configured for macOS in current setup)
 - **Excel Files**: Close any Excel files before running scrapers to avoid permission errors
 - **Legal Compliance**: Ensure you have permission to scrape data and comply with website terms of service
+
+## 📈 Candidate Ranking System
+
+The system includes an automated candidate ranking feature that scores and ranks candidates based on multiple criteria. See [RANKING.md](RANKING.md) for detailed documentation.
+
+**Key Features:**
+
+- Automatic scoring on 7 criteria (experience, clearance, education, etc.)
+- Customizable weights to match your hiring priorities
+- Ranked CSV output with detailed score breakdowns
+- Focus on top candidates first to streamline hiring
 
 ## 🤝 Contributing
 

@@ -10,6 +10,16 @@ from datetime import date
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import random
+import sys
+import os
+# Add parent directory to path to import candidateRanker
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+try:
+    from candidateRanker import rank_clearance_jobs_csv
+    RANKING_AVAILABLE = True
+except ImportError:
+    RANKING_AVAILABLE = False
+    print("Warning: candidateRanker module not found. Ranking will be skipped.")
 
 start = time.time()
 random.seed(None, 2)
@@ -234,6 +244,7 @@ def pagePush(driver, wb, s1, row):
             s1.write(row, 12, update)
         except:
             print("EXCEPT: No Last Update")                                                                                                        
+        # Save incrementally (will be ranked at the end)
         wb.save('cjScrape22_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
         pg += 1
@@ -252,7 +263,23 @@ def pagePush(driver, wb, s1, row):
     return row
 
 def saveFile(wb, row):
-    wb.save('cjScrape_(' + str(row) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
+    filename = 'cjScrape_(' + str(row) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv'
+    wb.save(filename)
+    
+    # Rank candidates automatically
+    if RANKING_AVAILABLE:
+        try:
+            print("\n" + "="*50)
+            print("Ranking candidates...")
+            print("="*50)
+            ranked_file = rank_clearance_jobs_csv(filename)
+            print(f"Ranked candidates saved to: {ranked_file}")
+            print(f"Top candidates are ranked by total score (0-100)")
+            print("="*50 + "\n")
+        except Exception as e:
+            print(f"Warning: Could not rank candidates: {e}")
+    
+    return filename
 
 
 if __name__ == "__main__":
