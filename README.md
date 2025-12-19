@@ -248,7 +248,3 @@ The system includes an automated candidate ranking feature that scores and ranks
 ## 🤝 Contributing
 
 This was an internship project. For improvements or questions, please open an issue.
-
-## 🙏 Acknowledgments
-
-Developed during Fall 2022 internship to support hiring operations and streamline candidate evaluation processes.
