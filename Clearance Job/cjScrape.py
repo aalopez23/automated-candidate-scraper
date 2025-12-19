@@ -17,14 +17,47 @@ def delay():
     return random.randint(3,6)
 
 #USER INPUTS
-#Logins: (Ptage92121, Advantech2022$) // (cba92037, g#M8q2qQ)
+# Configuration: Use config.py file or set environment variables
+# To use config.py: Copy config.example.py to config.py and fill in your credentials
 
-username = 'cba92037'
-password = 'g#M8q2qQ'
-query = 'Collect, process and analyze construction program data to present current and forecasted schedule and financial information in the form of reports, data tables and graphs combined within presentations or reports. Conduct data analytics using proprietary systems, exported data, complicated multi-sheet Excel documents, Pivot tables, timelines, trends, and interdependencies for leadership and stakeholders to incorporate into decision-making process. Distribute output reports to leadership and operations groups utilizing multiple tools including email, SharePoint, and Flank Speed to ensure outbound communication is effective and timely. Maintain, update, and improve complicated Excel documents to adjust for new projects, change in project grouping, modification to client business rules and gov’t financial fiscal year changes. Calculate Work in Progress (WIP) totals to compare with plan (budget), Schedule Performance Index, Cost Performance Index, in addition to several KPIs utilizing data collected from multiple systems and sources and populate tables and forms to present to the client, including Requests for Information, Proposed Changes, Project Modifications, Cost and Time Growth. Create Excel Queries to automate client’s needs to expedite dynamic report and filtration processes to locate anomalies and manage by exception any errors that surface. Review with Project Controls personnel any changes to project forecasts and completion times to advice and adjust Excel systems to correctly calculate Cost Growth, Time Growth and other KPIs and parameters.'
-search_type = True #----TRUE = Boolean, FALSE = Intellisearch----
+try:
+    import sys
+    import os
+    # Add parent directory to path to import config
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from config import CJ_USERNAME, CJ_PASSWORD, CJ_SEARCH_QUERY, CJ_SEARCH_TYPE
+    username = CJ_USERNAME
+    password = CJ_PASSWORD
+    query = CJ_SEARCH_QUERY
+    search_type = CJ_SEARCH_TYPE
+except ImportError:
+    # Fallback to environment variables or prompt user
+    import os
+    username = os.getenv('CJ_USERNAME', '')
+    password = os.getenv('CJ_PASSWORD', '')
+    query = os.getenv('CJ_SEARCH_QUERY', '')
+    search_type = os.getenv('CJ_SEARCH_TYPE', 'True').lower() == 'true'
+    
+    if not username or not password or not query:
+        print("ERROR: Configuration not found!")
+        print("Please either:")
+        print("1. Create a config.py file (copy from config.example.py)")
+        print("2. Set environment variables: CJ_USERNAME, CJ_PASSWORD, CJ_SEARCH_QUERY")
+        print("3. Edit this file directly (not recommended for production)")
+        raise ValueError("Missing required configuration")
 
 def bot(username, password, query):
+    """
+    Main bot function to scrape candidate data from Clearance Jobs.
+    
+    Args:
+        username (str): Clearance Jobs username
+        password (str): Clearance Jobs password
+        query (str): Search query string
+    
+    Returns:
+        None: Saves data to CSV file
+    """
     #Create Driver
     options = Options()
     options.add_argument('--incognito')
@@ -92,6 +125,18 @@ def bot(username, password, query):
 
 #Push applicant data (50 apps) from one CJ page, push to Workbook
 def pagePush(driver, wb, s1, row):
+    """
+    Scrapes data from one page of search results (up to 50 applicants).
+    
+    Args:
+        driver: Selenium WebDriver instance
+        wb: Workbook object for Excel file
+        s1: Worksheet object
+        row (int): Current row number in Excel
+    
+    Returns:
+        int: Updated row number after processing page
+    """
     listURL = driver.current_url
     #Retrieve all applicant URLs
     apps = driver.find_elements(By.CLASS_NAME, 'resume-search-candidate-card-desktop__name')
@@ -210,8 +255,9 @@ def saveFile(wb, row):
     wb.save('cjScrape_(' + str(row) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
 
-bot(username, password, query)
-
-#Record and ouput runtime
-end = time.time()
-print('PROGRAM RUNTIME: ' + str(end - start))
+if __name__ == "__main__":
+    bot(username, password, query)
+    
+    #Record and output runtime
+    end = time.time()
+    print('PROGRAM RUNTIME: ' + str(end - start))

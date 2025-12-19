@@ -11,9 +11,32 @@ from spApplicantInfo import*
 from Paste import*
 
 #Login Credentials
-username = 'stran@advantechglobal.org'
-password = 'steventran2022$'
-query = '(system OR network OR systems) AND (administrator OR admin OR validate OR validation OR validator) AND (test OR testing OR tested OR tester OR troubleshooting OR troubleshoot OR troubleshot) AND (ACAS OR SCAP OR LAN OR LANs) AND (STIGs OR STIG OR a&a OR authentication OR authorization OR access OR assurance OR compliance OR implementaqtion) AND (putty OR winscp OR securecrt) AND (cyber OR security) AND (windows OR unix)'
+# Configuration: Use config.py file or set environment variables
+# To use config.py: Copy config.example.py to config.py and fill in your credentials
+
+try:
+    import sys
+    import os
+    # Add parent directory to path to import config
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from config import SP_USERNAME, SP_PASSWORD, SP_SEARCH_QUERY
+    username = SP_USERNAME
+    password = SP_PASSWORD
+    query = SP_SEARCH_QUERY
+except ImportError:
+    # Fallback to environment variables or prompt user
+    import os
+    username = os.getenv('SP_USERNAME', '')
+    password = os.getenv('SP_PASSWORD', '')
+    query = os.getenv('SP_SEARCH_QUERY', '')
+    
+    if not username or not password or not query:
+        print("ERROR: Configuration not found!")
+        print("Please either:")
+        print("1. Create a config.py file (copy from config.example.py)")
+        print("2. Set environment variables: SP_USERNAME, SP_PASSWORD, SP_SEARCH_QUERY")
+        print("3. Edit this file directly (not recommended for production)")
+        raise ValueError("Missing required configuration")
 
 #Start runtime timer
 start = time.time()
@@ -28,6 +51,17 @@ def countdown(t):
         
 t = 50
 def bot(username, password, query):
+    """
+    Main bot function to scrape resume data from SharePoint.
+    
+    Args:
+        username (str): SharePoint username/email
+        password (str): SharePoint password
+        query (str): Search query string
+    
+    Returns:
+        None: Saves data to CSV file
+    """
     #Create Driver
     options = Options()
     options.binary_location = '/Applications/Google Chrome.app'
@@ -302,8 +336,9 @@ def bot(username, password, query):
 
     wb.save('spScrape_(' + str(row - 1) + 'apps)_' + date.today().strftime("%m_%d_%Y") + '.csv')
 
-bot(username, password, query)
-
-#Record and ouput runtime
-end = time.time()
-print('PROGRAM RUNTIME: ' + str(end - start))
+if __name__ == "__main__":
+    bot(username, password, query)
+    
+    #Record and output runtime
+    end = time.time()
+    print('PROGRAM RUNTIME: ' + str(end - start))
